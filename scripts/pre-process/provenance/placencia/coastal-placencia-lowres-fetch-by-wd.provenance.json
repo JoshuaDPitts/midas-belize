@@ -1,0 +1,27 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/FetchByWD.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Coastal lo-res fetch by polygon \u00d7 wind direction.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/FetchByWD.csv"
+  ],
+  "dataset_id": "coastal-placencia-lowres-fetch-by-wd",
+  "schema_family": "mimes-coastal-fetch",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "join_to": "placencia-coast-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "tags": [
+    "mimes-input",
+    "coastal",
+    "placencia"
+  ],
+  "title": "Coastal lo-res fetch by polygon \u00d7 wind direction",
+  "description": "Per (polygon \u00d7 wind direction) fetch distance with multiple variants (Fetch_m, Fetch2_m, plus coral-reef-on/off branches).",
+  "notes": "DRAFTED 2026-05-12 \u2014 coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

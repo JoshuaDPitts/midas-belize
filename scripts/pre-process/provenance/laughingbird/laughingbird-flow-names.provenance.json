@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/input/Flow Names.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Laughing Bird Caye MIMES inputs (Simile model)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Laughing Bird flow names (Laughing Bird Caye MIMES model input).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/input/Flow Names.csv"],
+  "dataset_id": "laughingbird-flow-names",
+  "schema_family": "flow-names",
+  "scope": "site",
+  "sites": ["laughing-bird"],
+  "tags": ["mimes-input", "simile", "laughing-bird"],
+  "title": "Laughing Bird flow names",
+  "description": "Named flow labels for the Simile stock-flow model (Marine model food-web + coral dynamics). Project-internal lookup table.",
+  "notes": "DRAFTED — MIMES/MIDAS Simile model input. Under Laughing Bird Caye (World Heritage MPA, ~43 marine polygons with 7 depth bins per reference/summary.md §1). Schema family is minimal (see DL-017 part 2); real column specs will surface via drift detector during bulk seed."
+}

@@ -1,0 +1,28 @@
+/* Visualization palette — brand-keyed, OKLCH.
+   Categorical: teal-anchored, distributed around hue wheel (colorblind-considered).
+   Diverging: teal ↔ neutral ↔ coral (uses brand accent hues).
+   Sequential: teal monochrome, 5 stops light → dark. */
+
+:root {
+  /* Categorical — 8 colors */
+  --color-viz-1: oklch(72% 0.13 180);   /* teal */
+  --color-viz-2: oklch(70% 0.16 30);    /* coral */
+  --color-viz-3: oklch(65% 0.18 260);   /* indigo */
+  --color-viz-4: oklch(75% 0.15 85);    /* amber */
+  --color-viz-5: oklch(60% 0.20 320);   /* magenta */
+  --color-viz-6: oklch(70% 0.17 140);   /* jade */
+  --color-viz-7: oklch(65% 0.20 55);    /* terra */
+  --color-viz-8: oklch(55% 0.15 210);   /* ocean */
+
+  /* Diverging — teal ↔ neutral ↔ coral */
+  --color-diverge-negative: oklch(55% 0.14 180);
+  --color-diverge-neutral:  oklch(88% 0.03 180);
+  --color-diverge-positive: oklch(58% 0.18 30);
+
+  /* Sequential — teal monochrome, 5 stops */
+  --color-seq-1: oklch(95% 0.04 180);
+  --color-seq-2: oklch(78% 0.14 180);
+  --color-seq-3: oklch(60% 0.14 180);
+  --color-seq-4: oklch(40% 0.10 180);
+  --color-seq-5: oklch(22% 0.05 180);
+}

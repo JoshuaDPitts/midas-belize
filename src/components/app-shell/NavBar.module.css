@@ -1,0 +1,322 @@
+/* AppShell NavBar — floating glass overlay at top of viewport.
+   Three regions: logo (left), site selector (center), action cluster (right).
+   Distinct from the content-page NavBar at src/components/layout/NavBar/. */
+
+.nav {
+  position: fixed;
+  top: var(--space-3);
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 56px;
+  z-index: 10;
+  /* Glass chrome at 55% opacity (per design spec — denser than the 6% default, lighter than fully solid). */
+  background: color-mix(in oklch, var(--color-surface-raised) 55%, transparent);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass-md);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 var(--space-3);
+  gap: var(--space-3);
+  /* Promote to its own compositing layer so backdrop-filter doesn't
+     re-sample the continuously-repainting deck.gl canvas beneath it
+     (autoHighlight hover-picking repaints on every mousemove). */
+  transform: translateZ(0);
+  will-change: transform;
+  isolation: isolate;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.iconButton {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.iconButton:hover {
+  background: var(--glass-surface-medium);
+  color: var(--color-text);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Site selector trigger — kepler.gl-style pill with chevron + active-glow */
+.siteTrigger {
+  height: 38px;
+  padding: 0 12px 0 14px;
+  background: color-mix(in oklch, var(--color-surface-raised) 70%, transparent);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-base);
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  min-width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+
+.siteTrigger:hover {
+  background: var(--color-surface-overlay);
+  border-color: color-mix(in oklch, var(--color-accent) 28%, var(--glass-border-strong));
+}
+
+.siteTrigger[aria-expanded="true"] {
+  background: var(--color-surface-overlay);
+  border-color: color-mix(in oklch, var(--color-accent) 38%, var(--glass-border-strong));
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-accent) 14%, transparent);
+}
+
+.siteTrigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.siteTrigger .triggerLabel {
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.005em;
+}
+
+.siteTrigger .triggerChevron {
+  display: inline-flex;
+  color: var(--color-text-secondary);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.siteTrigger[aria-expanded="true"] .triggerChevron {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+/* Dropdown — heavier glass, slide-down on open, accent rail on the active row */
+.menu {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(0);
+  /* Solid-leaning glass: tint the surface so it doesn't compete with the map labels behind it. */
+  background: color-mix(in oklch, var(--color-surface-raised) 92%, transparent);
+  backdrop-filter: blur(28px) saturate(220%);
+  -webkit-backdrop-filter: blur(28px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg),
+              0 0 0 1px color-mix(in oklch, var(--color-accent) 6%, transparent);
+  min-width: 240px;
+  padding: 6px;
+  list-style: none;
+  margin: 0;
+  animation: menuSlide var(--duration-normal) var(--ease-out) both;
+  transform-origin: top center;
+  /* Own compositing layer — same backdrop-filter-over-canvas flicker fix as .nav. */
+  will-change: transform;
+  isolation: isolate;
+}
+
+@keyframes menuSlide {
+  from { transform: translateX(-50%) translateY(-6px) translateZ(0); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0)    translateZ(0); opacity: 1; }
+}
+
+.menuItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 14px 9px 18px;
+  border-radius: 10px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-base);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.menuItem::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  border-radius: 2px;
+  background: var(--color-accent);
+  transition: height var(--duration-fast) var(--ease-out);
+}
+
+.menuItem:hover {
+  background: color-mix(in oklch, var(--color-accent) 8%, transparent);
+  color: var(--color-text);
+}
+
+.menuItem:hover::before {
+  height: 14px;
+  opacity: 0.4;
+}
+
+.menuItemActive,
+.menuItemActive:hover {
+  background: color-mix(in oklch, var(--color-accent) 14%, transparent);
+  color: var(--color-accent);
+}
+
+.menuItemActive::before {
+  height: 18px;
+  opacity: 1;
+}
+
+.feedback {
+  font-size: 11px;
+  color: var(--color-accent);
+  padding: 0 var(--space-2);
+  animation: fadeOut 2s forwards;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+@keyframes fadeOut {
+  0%, 70% { opacity: 1; }
+  100%    { opacity: 0; }
+}
+
+.iconButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---- Mobile branch ---- */
+
+.mobileNav {
+  grid-template-columns: auto 1fr auto;
+}
+
+.mobileLabel {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 14px;
+  letter-spacing: 0.005em;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: var(--glass-surface-strong, var(--glass-surface-medium));
+  backdrop-filter: blur(28px) saturate(220%);
+  -webkit-backdrop-filter: blur(28px) saturate(220%);
+  transform: translateZ(0);
+  will-change: transform;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-3);
+  gap: var(--space-3);
+}
+
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--glass-border-subtle);
+}
+
+.mobileMenuTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.mobileMenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mobileMenuSectionTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.mobileMenuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobileMenuAction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: color-mix(in oklch, var(--color-surface-raised) 70%, transparent);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  text-align: left;
+}
+
+.mobileMenuAction:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

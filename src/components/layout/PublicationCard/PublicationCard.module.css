@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.title { font-size: var(--font-size-content-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); }
+.authors { font-size: var(--font-size-content-sm); color: var(--color-text-secondary); }
+.meta { font-size: var(--font-size-content-sm); color: var(--color-text-tertiary); font-style: italic; }
+.links { display: flex; gap: var(--space-3); margin-top: var(--space-1); }
+.link { font-size: var(--font-size-content-sm); color: var(--color-accent); text-decoration: none; }
+.link:hover { text-decoration: underline; }
+.pdfLink {
+  font-size: var(--font-size-content-sm);
+  color: var(--color-text);
+  background: var(--glass-surface-medium);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  border: 1px solid var(--glass-border-subtle);
+}

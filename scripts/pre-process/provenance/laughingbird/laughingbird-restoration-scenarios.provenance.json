@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/input/Scenarios/Restoration scenarios.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES inputs (Laughing Bird scenarios)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Laughing Bird Caye restoration-scenario spec.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/input/Scenarios/Restoration scenarios.csv"],
+  "dataset_id": "laughingbird-restoration-scenarios",
+  "schema_family": "mimes-scenario-spec",
+  "scope": "site",
+  "sites": ["laughing-bird"],
+  "tags": ["mimes-input", "scenario-spec", "laughing-bird", "restoration"],
+  "title": "Laughing Bird restoration-scenario spec",
+  "description": "Scenario specification table for the Laughing Bird MIMES model: each row pairs a Scenario × Parameter with a value plus optional Coral target and per-scenario Settings. Defines the parameter sweeps that produce the BaseCase, WC, Deg, Res, etc. output runs.",
+  "notes": "DRAFTED 2026-05-12 — scenario spec for Laughing Bird. Drives the scenario-comparison surface in the Scenario Engine."
+}

@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/Sea Surface Temps.provenance.json",
+  "source": "GHRSST Level 4 OSTIA Global Foundation Sea Surface Temperature Analysis (UK Met Office, distributed via NASA PO.DAAC)",
+  "source_url": null,
+  "license": "GHRSST/PO.DAAC distribution terms — see provider",
+  "citation": "GHRSST. 2023. GHRSST Level 4 OSTIA Global Foundation Sea Surface Temperature Analysis. Ver. 1.0. UK Met Office. Distributed by the NASA PO.DAAC. Sampled at the Placencia Transect (LowTP 16.45816°N 88.01295°W; ModTP 16.49995°N 88.16527°W; HighTP 16.46540°N 88.31315°W) plus Belize City, Dangriga, and Sapodilla Cayes transects per Baumann et al. (Coral Symbiodinium Community Composition Across the Belize Mesoamerican Barrier Reef System is Influenced by Host Species and Thermal Variability).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/Sea Surface Temps.csv"],
+  "dataset_id": "sst-monthly-2015-2024",
+  "schema_family": "sst-timeseries",
+  "scope": "national",
+  "tags": ["sst", "timeseries", "climate", "national"],
+  "title": "Sea surface temperature — Belize transects, 2015–2024",
+  "description": "Monthly sea surface temperature (SST) time series sampled along Belize's coastal transects from the GHRSST Level 4 OSTIA dataset (UK Met Office, 0.05° foundation SST). Primary sampling at the Placencia Transect (LowTP, ModTP, HighTP); additional points at the Belize City, Dangriga, and Sapodilla Cayes transects. Feeds the marine model's heat-stress / bleaching threshold (31°C) logic. Transect coordinates and sampling rationale follow Baumann, Davies, Aichelman & Castillo, \"Coral Symbiodinium Community Composition Across the Belize Mesoamerican Barrier Reef System is Influenced by Host Species and Thermal Variability\".",
+  "notes": "Source identified 2026-04-29 — see DEC-027 follow-up. PO.DAAC dataset URL can be filled into source_url when verified."
+}

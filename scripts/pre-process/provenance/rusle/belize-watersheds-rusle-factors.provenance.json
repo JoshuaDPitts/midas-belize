@@ -1,0 +1,21 @@
+{
+  "_target_path": "raw/rusle-factors/belize-watersheds-rusle-factors.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — RUSLE soil-loss factors derived from open-source rasters via scripts/pre-process/rusle/compute.ts",
+  "source_url": "https://esdac.jrc.ec.europa.eu/content/global-rainfall-erosivity",
+  "license": "Composite of CC BY 4.0 (SoilGrids 2.0 / Copernicus DEM GLO-30 / ESA WorldCover v200) + ESDAC custom terms for GloREDa (joined per-polygon values are redistributable; the raw R-factor raster is not). Methodology assumption (P = 1.0) carries no license obligations.",
+  "citation": "Panagos et al. 2017 (GloREDa global R-factor, JRC ESDAC); Hengl et al. 2017 (SoilGrids 2.0, ISRIC); Copernicus DEM GLO-30 (Copernicus / ESA); ESA WorldCover v200 (ESA / VITO); Wischmeier & Smith 1978 (K nomograph, USDA AH-537); McCool et al. 1987 (LS formulation, in Renard et al. 1997 AH-703); Borrelli et al. 2017 (C lookup, Nature Communications 8:2013).",
+  "upstream_paths": [
+    "reference/rusle-factors/belize-watersheds-rusle-factors.csv"
+  ],
+  "dataset_id": "belize-watersheds-rusle-factors",
+  "schema_family": "rusle-factors",
+  "join_to": "watersheds-utm-shape",
+  "join_key": "WATERSHED",
+  "csv_key": "WATERSHED",
+  "scope": "national",
+  "sites": [],
+  "tags": ["rusle", "soil-loss", "watershed", "derived", "national"],
+  "title": "Belize national watersheds RUSLE factors",
+  "description": "Per-watershed R / K / LS / C / P / A (annual soil loss in t/ha/yr) for all 32 Belize national watershed polygons. Captures the full mainland soil-loss surface from the Maya Mountains to the northern lowlands and coastal lagoons.",
+  "notes": "DRAFTED 2026-05-26 — first run of the RUSLE ETL. Six polygons (Baracouta, Punta Ycacos, Middle River, Potts Creek, Santana Creek, Sarstoon) have K = 0 because their SoilGrids texture window is ocean-masked or no-data; these are lagoon / coastal / border-river polygons where soil-erosion is not physically meaningful. v1 LS uses local-slope approximation; upgrade path is whitebox-workflows D8 flow accumulation."
+}

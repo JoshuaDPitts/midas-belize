@@ -1,0 +1,33 @@
+/* Spacing, breakpoint, and layout-dimension tokens.
+   4pt spacing scale (1..40). Section-rhythm values (24/32/40 =
+   96/128/160px) added for cinematic content-page padding.
+   Breakpoints + panel dimensions co-located here as structural layout. */
+
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-40: 160px;
+
+  --breakpoint-mobile:  768px;
+  --breakpoint-tablet:  1024px;
+  --breakpoint-desktop: 1280px;
+
+  /* Vertical room the bottom-right basemap switcher dock occupies, so any
+     bottom-right legend/toggle can clear it with `calc(<own bottom> + this)`.
+     Includes the dock's own 25px lift off the bottom edge. */
+  --map-basemap-dock-clearance: 73px;
+
+  --panel-width-min:     240px;
+  --panel-width-default: 320px;
+  --panel-width-max:     50vw;
+  --content-max-width:   1120px;
+  --nav-height:          56px;
+}

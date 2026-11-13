@@ -1,0 +1,165 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background:
+    linear-gradient(
+      135deg,
+      oklch(from var(--color-surface-raised) l c h / 0.78),
+      oklch(from var(--color-surface) l c h / 0.6)
+    );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid oklch(from var(--color-border) l c h / 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  font-size: var(--font-size-xs, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.peak {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-secondary);
+}
+
+.peak strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.note {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs, 0.75rem);
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.tile {
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  background: oklch(from var(--color-surface) l c h / 0.55);
+  border: 1px solid oklch(from var(--color-border) l c h / 0.65);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    border-color 180ms var(--ease-out, ease-out),
+    transform 180ms var(--ease-out, ease-out),
+    background 180ms var(--ease-out, ease-out);
+}
+
+.tile:hover {
+  border-color: oklch(from var(--color-accent) l c h / 0.5);
+  transform: translateY(-1px);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.tileActive {
+  border-color: oklch(from var(--color-accent) l c h / 0.85);
+  background: oklch(from var(--color-accent) l c h / 0.12);
+}
+
+.tilePeak::after {
+  content: '';
+  position: absolute;
+}
+
+.tileLabel {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.tileBarTrack {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 28px;
+  background: oklch(from var(--color-border) l c h / 0.45);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.tileBar {
+  display: block;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    oklch(from var(--color-accent-warm) l c h / 0.95),
+    oklch(from var(--color-accent) l c h / 0.95)
+  );
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height 220ms var(--ease-out, ease-out);
+}
+
+.tileValue {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.tilePeak .tileLabel {
+  color: var(--color-accent);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resumeButton {
+  appearance: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid oklch(from var(--color-border) l c h / 0.8);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 180ms var(--ease-out, ease-out);
+}
+
+.resumeButton:hover {
+  background: oklch(from var(--color-accent) l c h / 0.12);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tileBar,
+  .resumeButton {
+    transition: none;
+  }
+
+  .tile:hover {
+    transform: none;
+  }
+}

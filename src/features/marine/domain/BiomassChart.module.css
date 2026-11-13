@@ -1,0 +1,156 @@
+/* BiomassChart — stacked-area-over-time with glass surface treatment.
+   Mirrors the glass figure pattern established by FoodWebDiagram (MA-006). */
+
+.figure {
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass-md), 0 4px 24px var(--glass-shadow), inset 0 1px 0 var(--glass-inset-highlight-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .figure {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme='light'] .figure {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.figcaption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover tooltip above the legend */
+.hoverTooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 10px;
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-glass-sm);
+  font-size: var(--font-size-app-xs);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hoverTooltipDate {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.hoverTooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hoverTooltipSwatch {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hoverTooltipLabel {
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.hoverTooltipVal {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+  font-weight: 600;
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+/* Legend chips — interactive buttons */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.legendChip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              opacity var(--duration-fast) var(--ease-out);
+}
+
+.legendChip:hover {
+  background: color-mix(in oklab, var(--glass-surface-subtle), var(--color-accent) 8%);
+  border-color: var(--glass-border-strong);
+}
+
+.legendChip:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.legendChipHidden {
+  opacity: 0.45;
+}
+
+.legendDot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.legendLabel {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure {
+    transition: none;
+  }
+  .legendChip {
+    transition: none;
+  }
+}

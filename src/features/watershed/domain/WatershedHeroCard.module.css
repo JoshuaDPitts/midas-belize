@@ -1,0 +1,202 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 6px);
+  background:
+    linear-gradient(
+      135deg,
+      oklch(from var(--color-surface-raised) l c h / 0.86),
+      oklch(from var(--color-surface-overlay) l c h / 0.7)
+    );
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid oklch(from var(--color-border) l c h / 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md), inset 0 1px 0 oklch(from var(--color-text) l c h / 0.04);
+  overflow: hidden;
+  transition:
+    transform 280ms var(--ease-out, ease-out),
+    box-shadow 280ms var(--ease-out, ease-out);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    135deg,
+    transparent 25%,
+    oklch(from var(--color-accent) l c h / 0.12) 50%,
+    transparent 75%
+  );
+  opacity: 0;
+  transition: opacity 320ms var(--ease-out, ease-out);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 oklch(from var(--color-text) l c h / 0.06);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.accentRail {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    oklch(from var(--color-accent) l c h / 0.95),
+    oklch(from var(--color-accent) l c h / 0.45)
+  );
+  border-radius: 0;
+}
+
+.header {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.thumb {
+  flex: 0 0 auto;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  flex: 1;
+}
+
+.name {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: var(--font-size-xl, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.mimesId {
+  font-size: var(--font-size-xs, 0.75rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.pill {
+  appearance: none;
+  border: 1px solid oklch(from var(--color-border) l c h / 0.8);
+  background: oklch(from var(--color-surface) l c h / 0.55);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs, 0.75rem);
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 180ms var(--ease-out, ease-out),
+    color 180ms var(--ease-out, ease-out),
+    border-color 180ms var(--ease-out, ease-out);
+}
+
+.pill:hover {
+  background: oklch(from var(--color-accent) l c h / 0.18);
+  border-color: oklch(from var(--color-accent) l c h / 0.55);
+  color: var(--color-text);
+}
+
+.pill:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.nbsBlock {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.nbsValue {
+  font-family: var(--font-display, var(--font-sans));
+  font-size: clamp(2rem, 1.6rem + 1vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.nbsLabel {
+  font-size: var(--font-size-xs, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 6em 1fr 3em;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.barLabel {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-secondary);
+}
+
+.barTrack {
+  height: 6px;
+  background: oklch(from var(--color-border) l c h / 0.6);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 360ms var(--ease-out, ease-out);
+}
+
+.barValue {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::before,
+  .pill,
+  .barFill {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}

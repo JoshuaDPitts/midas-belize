@@ -1,0 +1,128 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+  padding: var(--space-3, 0.75rem);
+  background: linear-gradient(
+    135deg,
+    oklch(from var(--color-surface-raised, #fff) l c h / 0.78),
+    oklch(from var(--color-surface, #f9f9f9) l c h / 0.6)
+  );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid oklch(from var(--color-border, #e2e8f0) l c h / 0.9);
+  border-radius: var(--radius-lg, 0.75rem);
+  box-shadow: var(--shadow-md, 0 4px 12px rgb(0 0 0 / 0.08));
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.headerTitle {
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary, #64748b);
+}
+
+.headerSubtitle {
+  font-size: 10px;
+  color: var(--color-text-tertiary, #94a3b8);
+  letter-spacing: 0.03em;
+}
+
+/* ── Loading / Empty ──────────────────────────────────────────────────────── */
+
+.loading,
+.empty {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-text-tertiary, #94a3b8);
+  text-align: center;
+  padding: var(--space-4, 1rem);
+}
+
+/* ── Bar list ─────────────────────────────────────────────────────────────── */
+
+.barList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1, 0.25rem);
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 48px 1fr 36px;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  padding: 5px var(--space-2, 0.5rem);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease;
+  outline: none;
+}
+
+.barRow:hover {
+  background: oklch(from var(--color-accent-warm, #f59e0b) l c h / 0.08);
+  border-color: oklch(from var(--color-accent-warm, #f59e0b) l c h / 0.3);
+}
+
+.barRow:focus-visible {
+  outline: 2px solid var(--color-focus-ring, #3b82f6);
+  outline-offset: 1px;
+}
+
+.barRowSelected {
+  background: oklch(from var(--color-accent-warm, #f59e0b) l c h / 0.12);
+  border-color: oklch(from var(--color-accent-warm, #f59e0b) l c h / 0.6);
+}
+
+/* ── Bar internals ────────────────────────────────────────────────────────── */
+
+.barLabel {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text, #0f172a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.barTrack {
+  position: relative;
+  height: 6px;
+  background: oklch(from var(--color-border, #e2e8f0) l c h / 0.7);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barFill {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background: var(--color-accent-warm, #f59e0b);
+  border-radius: inherit;
+  transition: width 300ms ease;
+}
+
+.barValue {
+  font-size: 10px;
+  color: var(--color-text-secondary, #64748b);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barRow,
+  .barFill {
+    transition: none;
+  }
+}

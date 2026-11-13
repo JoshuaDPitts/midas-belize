@@ -1,0 +1,28 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/Processed Output/Clade and Depth Bins/CayeCaulker_MIMES_nbs_scores.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 NbS (Nature-based Solutions) scoring",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Caye Caulker MIMES integrated output (NbS scores).",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/Processed Output/Clade and Depth Bins/CayeCaulker_MIMES_nbs_scores.csv"
+  ],
+  "dataset_id": "cayecaulker-mimes-nbs-scores",
+  "schema_family": "mimes-nbs-scores",
+  "scope": "site",
+  "sites": [
+    "caye-caulker"
+  ],
+  "tags": [
+    "marine",
+    "mimes-output",
+    "nbs-scores",
+    "caye-caulker"
+  ],
+  "title": "Caye Caulker MIMES integrated output \u2014 NbS scores",
+  "description": "NbS scoring per polygon for Caye Caulker MIMES integrated output. Joined to `cayecaulker-site` (CayeCaulker.shp, 9 polygons MIMES_ID 1\u20139) which is the full MIMES analysis grid for the site. See `cayecaulker-mimes-ebin-clade-detail` for the routing rationale.",
+  "join_to": "cayecaulker-site",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "notes": "DRAFTED \u2014 MIMES/MIDAS project-internal."
+}

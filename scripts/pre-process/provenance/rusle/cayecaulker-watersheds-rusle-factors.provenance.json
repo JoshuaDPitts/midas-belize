@@ -1,0 +1,21 @@
+{
+  "_target_path": "raw/rusle-factors/cayecaulker-watersheds-rusle-factors.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — RUSLE soil-loss factors derived from open-source rasters via scripts/pre-process/rusle/compute.ts",
+  "source_url": "https://esdac.jrc.ec.europa.eu/content/global-rainfall-erosivity",
+  "license": "Composite of CC BY 4.0 (SoilGrids 2.0 / Copernicus DEM GLO-30 / ESA WorldCover v200) + ESDAC custom terms for GloREDa (joined per-polygon values are redistributable; the raw R-factor raster is not). Methodology assumption (P = 1.0) carries no license obligations.",
+  "citation": "Panagos et al. 2017 (GloREDa global R-factor, JRC ESDAC); Hengl et al. 2017 (SoilGrids 2.0, ISRIC); Copernicus DEM GLO-30 (Copernicus / ESA); ESA WorldCover v200 (ESA / VITO); Wischmeier & Smith 1978 (K nomograph, USDA AH-537); McCool et al. 1987 (LS formulation, in Renard et al. 1997 AH-703); Borrelli et al. 2017 (C lookup, Nature Communications 8:2013).",
+  "upstream_paths": [
+    "reference/rusle-factors/cayecaulker-watersheds-rusle-factors.csv"
+  ],
+  "dataset_id": "cayecaulker-watersheds-rusle-factors",
+  "schema_family": "rusle-factors",
+  "join_to": "cayecaulker-watershed-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "MIMES_ID",
+  "scope": "site",
+  "sites": ["caye-caulker"],
+  "tags": ["rusle", "soil-loss", "watershed", "derived"],
+  "title": "Caye Caulker upstream watersheds RUSLE factors",
+  "description": "Per-watershed R / K / LS / C / P / A (annual soil loss in t/ha/yr) for the 3 upstream-mainland watersheds whose runoff reaches the Caye Caulker reef system. Caye Caulker itself is a sand caye with no terrestrial drainage; these polygons cover the Maya Mountain headwaters and northern mainland basins that source its sediment plume.",
+  "notes": "DRAFTED 2026-05-26 — first run of the RUSLE ETL. One polygon (MIMES_ID=3) has K=0 because its SoilGrids window is entirely ocean-masked over the caye itself. v1 LS uses local-slope approximation; upgrade path is whitebox-workflows D8 flow accumulation."
+}

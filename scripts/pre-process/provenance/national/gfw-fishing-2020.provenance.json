@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/gfw/gfw-fishing-2020.geojson",
+  "source": "Global Fishing Watch (GFW) — fishing effort 2020",
+  "source_url": "https://globalfishingwatch.org/our-apis/",
+  "license": "Free for non-commercial use (academic research, NGOs, and generally any free/open projects) under Global Fishing Watch's Terms of Use: https://globalfishingwatch.org/terms-of-use/",
+  "citation": "Global Fishing Watch (2020). Apparent fishing effort (hours) in the Belize exclusive economic zone, 2020. Accessed via the GFW public API under non-commercial use terms.",
+  "upstream_paths": ["external:gfw-api/fishing/2020/blz-eez"],
+  "dataset_id": "gfw-fishing-2020",
+  "schema_family": "gfw-fishing",
+  "scope": "national",
+  "tags": ["gfw", "fishing-effort", "marine", "national"],
+  "title": "GFW apparent fishing effort — Belize EEZ, 2020",
+  "description": "Global Fishing Watch apparent fishing effort (hours) by gear type for the Belize EEZ, calendar year 2020. Appendix A lists this as ~1 KB — likely minimal activity inside Belize's national waters for that year.",
+  "notes": "DRAFTED — license + citation match user-confirmed GFW terms. See gfw-presence-2024.provenance.json for the identical attribution pattern."
+}

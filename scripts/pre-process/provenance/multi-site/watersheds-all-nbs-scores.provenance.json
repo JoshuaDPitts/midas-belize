@@ -1,0 +1,29 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Watersheds_All_nbs_scores.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 NbS scoring (combined watersheds)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Combined watersheds NbS scores.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Watersheds_All_nbs_scores.csv"
+  ],
+  "dataset_id": "watersheds-all-nbs-scores",
+  "schema_family": "mimes-nbs-scores",
+  "scope": "multi-site",
+  "sites": [
+    "placencia",
+    "caye-caulker"
+  ],
+  "tags": [
+    "watershed",
+    "mimes-output",
+    "nbs-scores",
+    "multi-site"
+  ],
+  "title": "All watersheds \u2014 NbS scores",
+  "description": "NbS scoring per watershed polygon across Placencia + Caye Caulker.",
+  "join_to": "watersheds-utm-shape",
+  "join_key": "WATERSHED",
+  "csv_key": "Polygon_ID",
+  "notes": "DRAFTED \u2014 joined to `watersheds-utm-shape`; see watersheds-all-ebin-clade-detail for the routing rationale."
+}

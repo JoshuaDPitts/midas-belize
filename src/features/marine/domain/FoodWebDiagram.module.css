@@ -1,0 +1,226 @@
+/* FoodWebDiagram — trophic-level force layout with glass surface treatment */
+
+.figure {
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass-md), 0 4px 24px var(--glass-shadow), inset 0 1px 0 var(--glass-inset-highlight-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .figure {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme='light'] .figure {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.figcaption {
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+/* Trophic level band guide lines */
+.trophicBand {
+  opacity: 0.55;
+}
+
+/* Trophic level Y-axis text labels */
+.trophicLabel {
+  fill: var(--color-text);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+
+/* Edges — base */
+.edge {
+  opacity: 0.6;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+/* Edges that connect to the highlighted guild */
+.edgeHighlighted {
+  opacity: 1;
+}
+
+/* Edges that don't connect to the highlighted guild */
+.edgeDimmed {
+  opacity: 0.18;
+}
+
+/* Flow particle animating along offset-path */
+.flowParticle {
+  animation: flowAlong 2.5s linear infinite;
+}
+
+@keyframes flowAlong {
+  0%   { offset-distance: 0%;   opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* Node group */
+.node {
+  cursor: default;
+}
+
+/* Outer pulsing glow ring per node */
+.nodeGlowRing {
+  animation: pulseRing 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pulseRing {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50%       { opacity: 0.3;  transform: scale(1.12); }
+}
+
+/* Highlighted node ring — brighter pulse */
+.nodeGlowRingHighlighted {
+  animation: pulseRingHighlighted 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pulseRingHighlighted {
+  0%, 100% { opacity: 0.5;  transform: scale(1); }
+  50%       { opacity: 0.9;  transform: scale(1.18); }
+}
+
+/* Dimmed node when another is highlighted */
+.nodeDimmed circle {
+  opacity: 0.3;
+}
+
+.nodeDimmed .nodeGlowRing {
+  animation: none;
+  opacity: 0;
+}
+
+/* Hovered node — scale + brightness on main circle */
+.nodeHovered .nodeCircle {
+  transform: scale(1.1);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 150ms var(--ease-out);
+  filter: brightness(1.15);
+}
+
+/* Dim circles + labels of un-hovered nodes when something is hovered */
+.nodeUnhovered .nodeCircle {
+  opacity: 0.3;
+  transition: opacity 150ms var(--ease-out);
+}
+
+.nodeUnhovered .nodeText,
+.nodeUnhovered .nodeLabel {
+  opacity: 0.4;
+  transition: opacity 150ms var(--ease-out);
+}
+
+/* Main node circle base transition */
+.nodeCircle {
+  transition: transform 150ms var(--ease-out), opacity 150ms var(--ease-out);
+}
+
+.nodeText,
+.nodeLabel {
+  transition: opacity 150ms var(--ease-out);
+}
+
+/* Empty state */
+.empty {
+  padding: var(--space-4);
+  font-size: var(--font-size-app-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* View as table toggle row */
+.tableToggleRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-2);
+}
+
+.tableToggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+  font-size: var(--font-size-app-xs);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.tableToggle:hover {
+  background: color-mix(in oklab, var(--color-accent), transparent 90%);
+}
+
+.tableToggle:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Data table revealed by toggle */
+.dataTable {
+  width: 100%;
+  margin-top: var(--space-2);
+  border-collapse: collapse;
+  font-size: var(--font-size-app-xs);
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 4px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border-subtle);
+}
+
+.dataTable th {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.dataTable td {
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flowParticle         { animation: none; opacity: 0; }
+  .nodeGlowRing         { animation: none; }
+  .nodeGlowRingHighlighted { animation: none; }
+  .nodeCircle           { transition: none; }
+  .nodeText,
+  .nodeLabel            { transition: none; }
+  .nodeHovered .nodeCircle { transition: none; }
+  .nodeUnhovered .nodeCircle { transition: none; }
+}

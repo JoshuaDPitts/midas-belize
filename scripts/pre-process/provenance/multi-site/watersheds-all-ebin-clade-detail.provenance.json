@@ -1,0 +1,29 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Watersheds_All_ebin_clade_detail.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 MIMES model output (combined watersheds)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Combined watersheds (Placencia + Caye Caulker) clade \u00d7 depth-bin detail.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Watersheds_All_ebin_clade_detail.csv"
+  ],
+  "dataset_id": "watersheds-all-ebin-clade-detail",
+  "schema_family": "mimes-polygon-detail",
+  "scope": "multi-site",
+  "sites": [
+    "placencia",
+    "caye-caulker"
+  ],
+  "tags": [
+    "watershed",
+    "mimes-output",
+    "clade-detail",
+    "multi-site"
+  ],
+  "title": "All watersheds \u2014 clade \u00d7 depth-bin detail",
+  "description": "Combined Placencia + Caye Caulker watershed polygons' clade \u00d7 depth-bin breakdown.",
+  "join_to": "watersheds-utm-shape",
+  "join_key": "WATERSHED",
+  "csv_key": "Polygon_ID",
+  "notes": "DRAFTED \u2014 MIMES/MIDAS project-internal. Joined to `watersheds-utm-shape` (Belize national UTM watersheds, single `WATERSHED` name column) which covers all sites; the CSV's `Polygon_ID` values are watershed names like `Big Creek`, `Baracouta`, `Potts Creek` that resolve directly against `WATERSHED`."
+}

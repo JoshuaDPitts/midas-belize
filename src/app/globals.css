@@ -1,0 +1,13 @@
+@import '../styles/tokens/_index.css';
+@import '../styles/reset.css';
+
+/* Deck.gl runs in `interleaved: true` mode (see MapView.tsx), which means
+   MapLibre owns the canvas cursor and resets it back to `grab` on every
+   mousemove. Per-layer onHover handlers can set the cursor inline, but
+   MapLibre's next mousemove (~5 ms later) wipes it. This rule lets a
+   layer flag pickable-hover via a data-attribute on the maplibregl-map
+   container; `cursor: pointer !important` on an external rule beats
+   MapLibre's normal inline assignment. */
+.maplibregl-map[data-pickable-hover='true'] .maplibregl-canvas {
+  cursor: pointer !important;
+}

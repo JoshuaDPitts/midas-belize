@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public reads on catalog + ops collections
+    match /datasets/{id}                 { allow read: if true; allow write: if false; }
+    match /datasets/{id}/versions/{v}    { allow read: if true; allow write: if false; }
+    match /schemas/{id}                  { allow read: if true; allow write: if false; }
+    match /schema_drift/{id}             { allow read: if true; allow write: if false; }
+    match /discovered_files/{id}         { allow read: if true; allow write: if false; }
+    match /pipeline_runs/{id}            { allow read: if true; allow write: if false; }
+
+    // Server-only (Admin SDK bypasses rules)
+    match /rate_limits/{ip}              { allow read, write: if false; }
+    match /drive_state/{id}              { allow read, write: if false; }
+    match /access_logs/{doc}             { allow read, write: if false; }
+    match /scenarios/{id}                { allow read: if true; allow write: if false; }
+
+    // Default deny
+    match /{document=**}                 { allow read, write: if false; }
+  }
+}

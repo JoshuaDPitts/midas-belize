@@ -1,0 +1,156 @@
+.toast {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  max-width: 420px;
+  font-size: var(--font-size-app-sm);
+  color: var(--color-text);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--glass-border-strong);
+  border-left-width: 3px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  animation: slideIn var(--duration-slow) var(--ease-out);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.toast_info {
+  border-left-color: var(--color-accent);
+}
+
+.toast_success {
+  border-left-color: var(--color-status-success);
+}
+
+.toast_error {
+  border-left-color: var(--color-status-error);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-app-sm);
+  flex-shrink: 0;
+}
+
+.toast_info .icon {
+  color: var(--color-accent);
+  background: color-mix(in oklch, var(--color-accent) 14%, transparent);
+}
+
+.toast_success .icon {
+  color: var(--color-status-success);
+  background: color-mix(in oklch, var(--color-status-success) 14%, transparent);
+}
+
+.toast_error .icon {
+  color: var(--color-status-error);
+  background: color-mix(in oklch, var(--color-status-error) 14%, transparent);
+}
+
+.message {
+  flex: 1 1 auto;
+  line-height: var(--line-height-normal);
+  word-break: break-word;
+}
+
+.action {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 1px dashed currentColor;
+}
+
+.action:hover {
+  filter: brightness(1.1);
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-app-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  color: var(--color-text-tertiary);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.close:hover {
+  color: var(--color-text);
+  background: var(--glass-surface-medium);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  opacity: 0.35;
+  animation-name: progressDrain;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: left center;
+}
+
+.toast_info .progress {
+  color: var(--color-accent);
+}
+
+.toast_success .progress {
+  color: var(--color-status-success);
+}
+
+.toast_error .progress {
+  color: var(--color-status-error);
+}
+
+@keyframes progressDrain {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}

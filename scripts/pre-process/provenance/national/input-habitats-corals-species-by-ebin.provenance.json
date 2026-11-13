@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Corals/Corals Species By EBIN.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coral species distribution by EBIN (elevation/depth bin).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Corals/Corals Species By EBIN.csv"],
+  "dataset_id": "input-habitats-corals-species-by-ebin",
+  "schema_family": "mimes-coral-by-ebin",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Coral species distribution by EBIN (elevation/depth bin)",
+  "description": "Per (EBIN × coral species) cover ratios + biomass parameters (CC, growth G, mortality M, respiration R) in kg/m² or yr⁻¹.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/Scenarios/Finding equilibrium.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES output (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia marine 'Finding equilibrium' scenario output.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/Scenarios/Finding equilibrium.csv"],
+  "dataset_id": "placencia-marine-output-finding-equilibrium",
+  "schema_family": "mimes-scenario-output-timeseries",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["mimes-output", "scenario-timeseries", "placencia", "marine", "simile"],
+  "title": "Placencia marine — 'Finding equilibrium' scenario output",
+  "description": "Time-series output of an equilibrium-finding scenario run for the Placencia marine sub-model. Header is BioMasses/i/j (polygon × guild). Useful for diagnosing model convergence.",
+  "notes": "DRAFTED 2026-05-12 — scenario name 'Finding equilibrium' is upstream-given."
+}

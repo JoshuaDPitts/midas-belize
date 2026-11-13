@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Coral Habitat Loss/Laughing Bird/Corals/Basecase.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES output",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Laughing Bird coral habitat loss — corals basecase.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Coral Habitat Loss/Laughing Bird/Corals/Basecase.csv"],
+  "dataset_id": "output-lb-coral-corals-bc",
+  "schema_family": "mimes-scenario-output-timeseries",
+  "scope": "site",
+  "sites": ["laughing-bird"],
+  "tags": ["mimes-output", "scenario-timeseries", "simile"],
+  "title": "Laughing Bird coral habitat loss — corals basecase",
+  "description": "Time-series of coral biomass / cover under the BaseCase coral-habitat-loss scenario at Laughing Bird Caye.",
+  "notes": "DRAFTED 2026-05-12 — Simile scenario output time-series. Will feed Scenario Engine (Phase 2 #9) when that sub-system is spec'd."
+}

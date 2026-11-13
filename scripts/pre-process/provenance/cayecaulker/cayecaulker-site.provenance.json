@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Caye Caulker/CayeCaulker.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Caye Caulker site boundary.",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Caye Caulker/CayeCaulker.shp"],
+  "dataset_id": "cayecaulker-site",
+  "schema_family": "site-boundary",
+  "scope": "site",
+  "sites": ["caye-caulker"],
+  "tags": ["site-boundary", "caye-caulker"],
+  "title": "Caye Caulker site boundary",
+  "description": "Site-extent polygon for Caye Caulker used for scoping marine/coastal analyses.",
+  "notes": "DRAFTED — picked `CayeCaulker.shp` over `CayeCaulkerWave.shp` (which appears to be a wave-exposure specific variant, not the base boundary)."
+}

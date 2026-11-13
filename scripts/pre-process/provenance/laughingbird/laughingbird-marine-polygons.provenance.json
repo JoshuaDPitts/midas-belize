@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/GIS/LaughingBirdBaseMap.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Marine model (Laughing Bird Caye)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Laughing Bird marine polygons.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Laughing Bird/GIS/LaughingBirdBaseMap.shp"],
+  "dataset_id": "laughing-bird-marine-polygons",
+  "schema_family": "marine-polygons",
+  "scope": "site",
+  "sites": ["laughing-bird"],
+  "tags": ["marine", "polygons", "laughing-bird"],
+  "title": "Laughing Bird marine polygons",
+  "description": "Marine EBIN polygons for Laughing Bird Caye — geometry keyed by mimes_id (lowercase in the source DBF). Source: LaughingBirdBaseMap.shp (43 polygon features). Used as the base geometry layer for the site and the join target for coral-biomass scenario outputs (join_key mimes_id ↔ biomass polygon_id)."
+}

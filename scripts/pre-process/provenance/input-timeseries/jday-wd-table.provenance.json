@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/WDbyJDAY.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile Marine model wind-direction forcing",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Wind direction by Julian day (8 directional bins).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/WDbyJDAY.csv"],
+  "dataset_id": "jday-wd-table",
+  "schema_family": "jday-table",
+  "scope": "national",
+  "tags": ["jday", "wind-direction", "timeseries", "simile-input", "national"],
+  "title": "Wind direction by Julian day (8 bins)",
+  "description": "Wind direction probability by Julian day (1–365) across 8 directional bins, used by the Simile Marine model for fetch/wave-energy forcing (reference/summary.md §4).",
+  "notes": "DRAFTED — MIMES/MIDAS project-internal. summary.md §4 confirms \"Wind direction probability by Julian day (8 directional bins)\". Treating as project-derived (not externally sourced); if it actually comes from NOAA wind climatology, adjust."
+}

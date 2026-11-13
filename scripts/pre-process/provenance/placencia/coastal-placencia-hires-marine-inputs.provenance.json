@@ -1,0 +1,17 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/HIgh Res/Marine Inputs.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coastal hi-res marine-input directions.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/HIgh Res/Marine Inputs.csv"],
+  "dataset_id": "coastal-placencia-hires-marine-inputs",
+  "schema_family": "mimes-coastal-generic",
+  "scope": "site",
+  "sites": ["placencia"],
+  
+  "tags": ["mimes-input", "coastal", "placencia"],
+  "title": "Coastal hi-res marine-input directions",
+  "description": "Per (location × direction) marine-input lookup with sourcing tag. 'Souced' header preserved as upstream-spelt.",
+  "notes": "DRAFTED 2026-05-12 — coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

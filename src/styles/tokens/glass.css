@@ -1,0 +1,27 @@
+/* Glass tokens — theme-aware translucent surfaces.
+   UNCHANGED from v1. 90% intensity preserved. Used by ~23 components
+   via backdrop-filter + these variables. */
+
+[data-theme='dark'] {
+  --glass-surface-subtle: rgba(255, 255, 255, 0.04);
+  --glass-surface-medium: rgba(255, 255, 255, 0.08);
+  --glass-surface-strong: rgba(255, 255, 255, 0.14);
+  --glass-border-subtle:  rgba(255, 255, 255, 0.1);
+  --glass-border-strong:  rgba(255, 255, 255, 0.18);
+  --glass-shine:          rgba(255, 255, 255, 0.5);
+  --glass-inset-highlight-subtle: rgba(255, 255, 255, 0.1);
+  --glass-inset-highlight:        rgba(255, 255, 255, 0.25);
+  --glass-shadow:         rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='light'] {
+  --glass-surface-subtle: rgba(15, 23, 42, 0.03);
+  --glass-surface-medium: rgba(15, 23, 42, 0.06);
+  --glass-surface-strong: rgba(15, 23, 42, 0.1);
+  --glass-border-subtle:  rgba(15, 23, 42, 0.08);
+  --glass-border-strong:  rgba(15, 23, 42, 0.15);
+  --glass-shine:          rgba(13, 148, 136, 0.25);
+  --glass-inset-highlight-subtle: rgba(255, 255, 255, 0.4);
+  --glass-inset-highlight:        rgba(255, 255, 255, 0.7);
+  --glass-shadow:         rgba(15, 23, 42, 0.12);
+}

@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild Migration Attributes 16.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Foodweb sub-model (Simile)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — 16-guild foodweb migration attributes.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild Migration Attributes 16.csv"],
+  "dataset_id": "foodweb-guild-migration-16",
+  "schema_family": "mimes-foodweb-guild-migration",
+  "scope": "national",
+  "tags": ["mimes-input", "foodweb", "guild-migration", "simile"],
+  "title": "Foodweb guild migration attributes (16-guild model)",
+  "description": "Per-guild migration parameters for the 16-guild MIMES foodweb model: initial biomass ranges (min/max/adjust, in tons), horizontal migration strength (0-1), food biomass thresholds, low/high M:F ratios. Drives migration dynamics between adjacent polygons in the marine sub-model.",
+  "notes": "DRAFTED 2026-05-12 — paired with mimes-foodweb-guild-migration schema."
+}

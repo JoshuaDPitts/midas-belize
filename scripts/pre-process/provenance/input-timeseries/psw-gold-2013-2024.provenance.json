@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/PSWGold2013-2024.provenance.json",
+  "source": "NOAA NCEI Global Surface Summary of the Day (GSOD) — Belize City Philip S. W. Goldson International Airport",
+  "source_url": null,
+  "license": "Public domain (NOAA, US Government work)",
+  "citation": "National Centers for Environmental Information (NCEI). Global Surface Summary of the Day (GSOD). NOAA National Centers for Environmental Information. Data derived from the Integrated Surface Hourly (ISH) dataset and USAF DATSAV3 surface observations. Accessed via the GSOD archive.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/PSWGold2013-2024.csv"],
+  "dataset_id": "psw-gold-2013-2024",
+  "schema_family": "psw-gold-timeseries",
+  "scope": "national",
+  "tags": ["psw-gold", "weather", "timeseries", "national"],
+  "title": "Daily weather summary — Philip S. W. Goldson Int'l Airport, 2013–2024",
+  "description": "Daily weather summary time series 2013–2024 from NOAA NCEI's Global Surface Summary of the Day (GSOD) for Belize City — Philip S. W. Goldson International Airport (the \"PSW Gold\" filename is the airport name initialism). GSOD values are derived from the Integrated Surface Hourly (ISH) dataset and USAF DATSAV3 surface observations.",
+  "notes": "Source identified 2026-04-29 — see DEC-027 follow-up. NCEI GSOD landing page URL can be filled into source_url when verified."
+}

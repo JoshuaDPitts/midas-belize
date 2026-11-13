@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/gfw/gfw-presence-2024.geojson",
+  "source": "Global Fishing Watch (GFW) — vessel presence 2024",
+  "source_url": "https://globalfishingwatch.org/our-apis/",
+  "license": "Free for non-commercial use (academic research, NGOs, and generally any free/open projects) under Global Fishing Watch's Terms of Use: https://globalfishingwatch.org/terms-of-use/",
+  "citation": "Global Fishing Watch (2024). Vessel presence in the Belize exclusive economic zone, 2024. Accessed via the GFW public API under non-commercial use terms.",
+  "upstream_paths": ["external:gfw-api/presence/2024/blz-eez"],
+  "dataset_id": "gfw-presence-2024",
+  "schema_family": "gfw-presence",
+  "scope": "national",
+  "tags": ["gfw", "vessel-presence", "marine", "national"],
+  "title": "GFW vessel presence — Belize EEZ, 2024",
+  "description": "Global Fishing Watch vessel presence (all flags) aggregated to grid cells for the Belize exclusive economic zone, calendar year 2024. ~31,438 cells per Appendix A sizing.",
+  "notes": "DRAFTED — license + citation reflect user-confirmed GFW terms (free for non-commercial use including academic/NGO/open projects). If `scripts/import-gfw-*.ts` already carries a preferred GFW citation string, reuse that form for consistency."
+}

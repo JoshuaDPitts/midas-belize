@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/NSFCOPES_BU/Rfactor-Stations.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Watershed / RUSLE model",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — R-factor station point data.",
+  "upstream_paths": ["reference/NSFCOPES_BU/Rfactor-Stations.shp"],
+  "dataset_id": "erosivity-stations",
+  "schema_family": "erosivity-stations",
+  "scope": "national",
+  "tags": ["erosivity", "watershed", "rusle", "national"],
+  "title": "Erosivity measurement stations",
+  "description": "Point locations of rainfall erosivity (R-factor) measurement stations used in the Belize watershed RUSLE model.",
+  "notes": "DRAFTED — MIMES/MIDAS project-internal. Source + license wording copied from placencia-site.ts precedent. Confirm that's still the right boilerplate."
+}

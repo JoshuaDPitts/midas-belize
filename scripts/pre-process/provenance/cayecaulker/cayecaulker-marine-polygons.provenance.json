@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Caye Caulker/Marine/CC_Marine.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Marine model (Caye Caulker)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Caye Caulker marine polygons.",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Caye Caulker/Marine/CC_Marine.shp"],
+  "dataset_id": "cayecaulker-marine-polygons",
+  "schema_family": "marine-polygons",
+  "scope": "site",
+  "sites": ["caye-caulker"],
+  "tags": ["marine", "polygons", "caye-caulker"],
+  "title": "Caye Caulker marine polygons",
+  "description": "Marine polygons for Caye Caulker used by the MIMES food-web + coral dynamics model (reference/summary.md §2.3).",
+  "notes": "DRAFTED — MIMES/MIDAS project-internal."
+}

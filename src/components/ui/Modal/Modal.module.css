@@ -1,0 +1,85 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.dialog {
+  background: rgba(15, 22, 41, 0.8);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-xl);
+  max-height: 85vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 2px 0 var(--glass-inset-highlight-subtle);
+}
+
+/* Top shine */
+.dialog::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, var(--glass-shine) 50%, transparent 90%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sm { width: min(360px, 90vw); }
+.md { width: min(520px, 90vw); }
+.lg { width: min(720px, 90vw); }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--glass-border-subtle);
+}
+
+.title {
+  font-size: var(--font-size-app-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.closeButton:hover {
+  background: var(--glass-surface-strong);
+  border-color: var(--glass-border-strong);
+  color: var(--color-text);
+}
+
+.body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  max-height: calc(85vh - 60px);
+}

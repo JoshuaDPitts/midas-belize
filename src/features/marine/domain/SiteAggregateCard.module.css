@@ -1,0 +1,110 @@
+.card {
+  padding: var(--space-4);
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-glass-md);
+}
+
+.heroLabel {
+  font-family: var(--font-display);
+  font-size: var(--font-size-app-2xl);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-display);
+  color: var(--color-text);
+  text-shadow: 0 1px 2px color-mix(in oklab, currentColor, transparent 92%);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--font-size-app-xs);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.statCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-app-xs);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.statValue {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px dashed var(--glass-border-strong);
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--color-accent), transparent 96%);
+}
+
+.ctaIcon {
+  color: var(--color-accent);
+  animation: pulseCrosshair 2s ease-in-out infinite;
+}
+
+@keyframes pulseCrosshair {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctaIcon { animation: none; }
+}
+
+.ctaText {
+  margin: 0;
+  font-size: var(--font-size-app-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.skeletonLine {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--glass-surface-medium),
+    color-mix(in oklab, var(--color-accent), transparent 84%),
+    var(--glass-surface-medium)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

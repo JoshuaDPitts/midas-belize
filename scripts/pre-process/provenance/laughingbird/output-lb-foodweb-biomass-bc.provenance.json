@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Carbon/Laughing Bird/Laughing Birs Foodweb/Biomass_BC.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES output",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Laughing Bird foodweb biomass — BaseCase.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Carbon/Laughing Bird/Laughing Birs Foodweb/Biomass_BC.csv"],
+  "dataset_id": "output-lb-foodweb-biomass-bc",
+  "schema_family": "mimes-scenario-output-timeseries",
+  "scope": "site",
+  "sites": ["laughing-bird"],
+  "tags": ["mimes-output", "scenario-timeseries", "simile"],
+  "title": "Laughing Bird foodweb biomass — BaseCase",
+  "description": "Time-series of biomass for each (guild × depth bin × polygon) cell in the Laughing Bird foodweb sub-model, BaseCase scenario. Header columns of form BIOMASS/i/j/k.",
+  "notes": "DRAFTED 2026-05-12 — Simile scenario output time-series. Will feed Scenario Engine (Phase 2 #9) when that sub-system is spec'd."
+}

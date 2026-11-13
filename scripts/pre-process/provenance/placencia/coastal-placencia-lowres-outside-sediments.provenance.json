@@ -1,0 +1,17 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/Outside Sediments.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coastal lo-res outside-sediment input by direction.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/Outside Sediments.csv"],
+  "dataset_id": "coastal-placencia-lowres-outside-sediments",
+  "schema_family": "mimes-coastal-outside-sediments",
+  "scope": "site",
+  "sites": ["placencia"],
+  
+  "tags": ["mimes-input", "coastal", "placencia"],
+  "title": "Coastal lo-res outside-sediment input by direction",
+  "description": "Per (wind direction × Julian day) sediment inflow rate from outside the model boundary. Lookup table.",
+  "notes": "DRAFTED 2026-05-12 — coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

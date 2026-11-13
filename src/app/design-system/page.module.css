@@ -1,0 +1,233 @@
+.page {
+  min-height: 100vh;
+  padding: var(--space-8) var(--space-6);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--font-size-app-2xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.themeToggle {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.themeToggle:hover {
+  background: var(--color-surface-overlay);
+  border-color: var(--color-border-strong);
+}
+
+.section {
+  margin-bottom: var(--space-12);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-app-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+
+.swatch {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-surface-raised);
+}
+
+.swatchColor {
+  height: 64px;
+  width: 100%;
+}
+
+.swatchInfo {
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.swatchLabel {
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.swatchToken {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+}
+
+.componentGroup {
+  margin-bottom: var(--space-6);
+}
+
+.componentRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.iconGroup {
+  margin-bottom: var(--space-6);
+}
+
+.iconGroupTitle {
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-3);
+}
+
+.iconRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.iconCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  min-width: 80px;
+}
+
+.iconName {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* Typography split-scale demo (DS2-005) */
+.typographyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.typographyColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.typographyColumnTitle {
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.typographyRow {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.typographyToken {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+}
+
+.typographySample {
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Radius reference (DS2-006) */
+.radiusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-4);
+}
+
+.radiusCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.radiusBox {
+  width: 72px;
+  height: 72px;
+  background: color-mix(in oklch, var(--color-accent) 20%, transparent);
+  border: 1px solid color-mix(in oklch, var(--color-accent) 40%, transparent);
+}
+
+.radiusToken {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* Shadow reference (DS2-006) */
+.shadowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-6);
+}
+
+.shadowCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.shadowBox {
+  width: 120px;
+  height: 80px;
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-md);
+}
+
+.shadowToken {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+}

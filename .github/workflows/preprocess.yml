@@ -1,0 +1,127 @@
+name: preprocess
+
+on:
+  repository_dispatch:
+    # 'preprocess' is fired by the drive-poller Cloud Function on Drive changes.
+    # 'rerun' is fired by the /api/ops/rerun/[dataset] endpoint (DL-033).
+    types: [preprocess, rerun]
+  workflow_dispatch:
+    inputs:
+      dataset_id:
+        description: 'Preprocess a single dataset by id (leave blank to seed all)'
+        required: false
+        type: string
+
+concurrency:
+  group: preprocess
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+
+      - name: Install node deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Install GDAL + rio-cogeo (needed by DL-012 GeoTIFF converter)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gdal-bin python3-pip
+          pip install --user rio-cogeo rasterio
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+
+      - name: Decide dataset filter + run context
+        id: target
+        # Read all untrusted inputs via env to avoid shell-injection via ${{ }}
+        # interpolation. See https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_ACTION: ${{ github.event.action }}
+          PAYLOAD_DATASET_ID: ${{ github.event.client_payload.dataset_id }}
+          PAYLOAD_RUN_ID: ${{ github.event.client_payload.run_id }}
+          INPUT_DATASET_ID: ${{ github.event.inputs.dataset_id }}
+          GITHUB_RUN_ID_SAFE: ${{ github.run_id }}
+        run: |
+          case "$EVENT_NAME" in
+            repository_dispatch)
+              if [ "$EVENT_ACTION" = "rerun" ]; then
+                {
+                  echo "only=$PAYLOAD_DATASET_ID"
+                  echo "run_id=$PAYLOAD_RUN_ID"
+                  echo "trigger=dataset-rerun"
+                } >> "$GITHUB_OUTPUT"
+              else
+                # preprocess event — full seed, triggered by the drive-poller
+                {
+                  echo "only="
+                  echo "run_id=drive-$GITHUB_RUN_ID_SAFE"
+                  echo "trigger=drive-change"
+                } >> "$GITHUB_OUTPUT"
+              fi
+              ;;
+            workflow_dispatch)
+              if [ -n "$INPUT_DATASET_ID" ]; then
+                echo "only=$INPUT_DATASET_ID" >> "$GITHUB_OUTPUT"
+              else
+                echo "only=" >> "$GITHUB_OUTPUT"
+              fi
+              {
+                echo "run_id=manual-$GITHUB_RUN_ID_SAFE"
+                echo "trigger=manual-dispatch"
+              } >> "$GITHUB_OUTPUT"
+              ;;
+            schedule)
+              {
+                echo "only="
+                echo "run_id=schedule-$GITHUB_RUN_ID_SAFE"
+                echo "trigger=schedule"
+              } >> "$GITHUB_OUTPUT"
+              ;;
+          esac
+
+      - name: Run preprocess
+        env:
+          USE_EMULATORS: '0'
+          PIPELINE_RUN_ID: ${{ steps.target.outputs.run_id }}
+          PIPELINE_TRIGGER: ${{ steps.target.outputs.trigger }}
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ONLY: ${{ steps.target.outputs.only }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/preprocess"
+          LOG="$RUNNER_TEMP/preprocess/log.txt"
+          if [ -n "$ONLY" ]; then
+            pnpm preprocess --only "$ONLY" 2>&1 | tee "$LOG"
+          else
+            pnpm preprocess --seed 2>&1 | tee "$LOG"
+          fi
+
+      - name: Upload run log to GCS
+        if: always()
+        env:
+          RUN_ID: ${{ steps.target.outputs.run_id }}
+        run: |
+          LOG="$RUNNER_TEMP/preprocess/log.txt"
+          if [ -f "$LOG" ]; then
+            gsutil cp "$LOG" \
+              "gs://midas-data/_meta/pipeline-runs/${RUN_ID}/logs.txt" || true
+          fi

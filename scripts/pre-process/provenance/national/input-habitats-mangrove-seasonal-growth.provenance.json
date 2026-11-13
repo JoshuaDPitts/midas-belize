@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Mangroves/Mangrove Seasonal Growth.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Mangrove seasonal growth calendar.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Mangroves/Mangrove Seasonal Growth.csv"],
+  "dataset_id": "input-habitats-mangrove-seasonal-growth",
+  "schema_family": "mimes-mangrove-seasonal-growth",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Mangrove seasonal growth calendar",
+  "description": "Per (Julian day × species) growth-season tagging for the mangrove sub-model. Drives the time-of-year growth modifier.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

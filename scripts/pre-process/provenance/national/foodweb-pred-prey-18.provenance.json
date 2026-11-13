@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Pred Prey IDs 18.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Foodweb sub-model (Simile)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — 18-guild foodweb predator-prey edge list (extended variant).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Pred Prey IDs 18.csv"],
+  "dataset_id": "foodweb-pred-prey-18",
+  "schema_family": "mimes-foodweb-pred-prey",
+  "scope": "national",
+  "tags": ["mimes-input", "foodweb", "trophic-graph", "pred-prey", "18-guild", "simile"],
+  "title": "Foodweb predator-prey edges (18-guild model)",
+  "description": "Edge list for the 18-guild extended variant of the MIMES foodweb model. Two additional guilds vs the 16-guild canonical version. Kept available for cross-comparison + future migration; the current Marine UI continues to render the 16-guild graph.",
+  "notes": "DRAFTED 2026-05-12 — verify with user whether the 18-guild model is in active use, or just an exploratory branch."
+}

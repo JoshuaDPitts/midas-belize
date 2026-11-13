@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/PlacenciaExtent.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia broader study extent (wider bounding polygon).",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/PlacenciaExtent.shp"],
+  "dataset_id": "placencia-extent",
+  "schema_family": "site-extent",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["site-extent", "placencia"],
+  "title": "Placencia study extent",
+  "description": "Wider bounding polygon for the Placencia study area; used to frame maps + clip inputs beyond the tight site boundary.",
+  "notes": "DRAFTED — MIMES/MIDAS project-internal."
+}

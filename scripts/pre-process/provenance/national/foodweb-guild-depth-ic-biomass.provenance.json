@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild_ Depth_IC BM_CC.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Foodweb sub-model (Simile)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — foodweb guild × depth-bin initial conditions + carrying capacity.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild_ Depth_IC BM_CC.csv"],
+  "dataset_id": "foodweb-guild-depth-ic-biomass",
+  "schema_family": "mimes-foodweb-guild-depth-ic",
+  "scope": "national",
+  "tags": ["mimes-input", "foodweb", "depth-bin", "initial-conditions", "carrying-capacity", "simile"],
+  "title": "Foodweb guild × depth-bin initial biomass + carrying capacity",
+  "description": "Per (guild × depth bin) initial conditions and carrying capacity for the MIMES marine foodweb: min/max biomass (kg/m²), depth likelihood, IC_Biomass (with + without migrants), carrying capacity. Joined to the 7 depth-bin (M_EBIN_ID 1..7) structure used throughout the model.",
+  "notes": "DRAFTED 2026-05-12 — same file appears in Marine Model/Habitats/. Mirror is content-hashed so only one canonical version publishes."
+}

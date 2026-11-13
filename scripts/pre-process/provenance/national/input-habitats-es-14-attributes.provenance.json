@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/ES_14 Attributes.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Ecosystem attributes (14-ecosystem partition).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/ES_14 Attributes.csv"],
+  "dataset_id": "input-habitats-es-14-attributes",
+  "schema_family": "mimes-es-attributes",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Ecosystem attributes (14-ecosystem partition)",
+  "description": "Per-ecosystem attributes: short name, Manning roughness, sand generation. Used by the 14-ecosystem partition.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

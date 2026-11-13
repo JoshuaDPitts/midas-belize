@@ -1,0 +1,23 @@
+/* Mobile container: hides the SidebarRail (no room for it at <=768px),
+   repositions the SidebarPanel as a bottom-edge container. The actual
+   BottomSheet primitive (drag handle, snap points) lands in LS-014; this
+   CSS just sets the breakpoint-keyed scaffolding so the existing
+   panel/rail components reflow naturally on mobile.
+
+   Targeting via :global() because the panel/rail components have their
+   own scoped class names; we key off their stable data-testid attributes. */
+.mobile :global([data-testid="rail"]),
+.mobile :global([data-testid^="rail-icon-"]) {
+  display: none;
+}
+
+.mobile :global([data-testid="appshell-sidebar-panel"]) {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  max-height: 80vh;
+}

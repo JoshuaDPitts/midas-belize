@@ -1,0 +1,27 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/PolyAttributes.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Coastal lo-res polygon attributes.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/PolyAttributes.csv"
+  ],
+  "dataset_id": "coastal-placencia-lowres-poly-attributes",
+  "schema_family": "mimes-coastal-poly-attributes",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "join_to": "placencia-coast-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "tags": [
+    "mimes-input",
+    "coastal",
+    "placencia"
+  ],
+  "title": "Coastal lo-res polygon attributes",
+  "description": "Per-polygon attributes for the Placencia lo-res coastal model: area in km\u00b2, statistical aggregates (_mean, _median, _min, _max) over an underlying raster.",
+  "notes": "DRAFTED 2026-05-12 \u2014 coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

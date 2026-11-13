@@ -1,0 +1,61 @@
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--letter-spacing-tight);
+  background: var(--glass-surface-subtle);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--glass-border-subtle);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-tertiary);
+  box-shadow: 0 0 0 2px color-mix(in oklch, currentColor 18%, transparent);
+}
+
+.label {
+  display: inline-block;
+}
+
+.fresh {
+  color: var(--color-status-success);
+  background: color-mix(in oklch, var(--color-status-success) 12%, transparent);
+  border-color: color-mix(in oklch, var(--color-status-success) 30%, transparent);
+}
+.fresh .dot {
+  background: var(--color-status-success);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-status-success) 28%, transparent);
+}
+
+.stale {
+  color: var(--color-status-warning);
+  background: color-mix(in oklch, var(--color-status-warning) 14%, transparent);
+  border-color: color-mix(in oklch, var(--color-status-warning) 32%, transparent);
+}
+.stale .dot {
+  background: var(--color-status-warning);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-status-warning) 28%, transparent);
+}
+
+.old {
+  color: var(--color-status-error);
+  background: color-mix(in oklch, var(--color-status-error) 14%, transparent);
+  border-color: color-mix(in oklch, var(--color-status-error) 32%, transparent);
+}
+.old .dot {
+  background: var(--color-status-error);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-status-error) 28%, transparent);
+}
+
+.unknown {
+  color: var(--color-text-tertiary);
+}

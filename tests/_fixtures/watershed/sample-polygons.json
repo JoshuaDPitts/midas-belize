@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "Name": "Big Creek", "MIMES_ID": 1 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-88.4, 16.5],
+            [-88.3, 16.5],
+            [-88.3, 16.6],
+            [-88.4, 16.6],
+            [-88.4, 16.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "Name": "Sennis", "MIMES_ID": 2 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-88.3, 16.5],
+            [-88.2, 16.5],
+            [-88.2, 16.6],
+            [-88.3, 16.6],
+            [-88.3, 16.5]
+          ]
+        ]
+      }
+    }
+  ]
+}

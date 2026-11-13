@@ -1,0 +1,150 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  cursor: ns-resize;
+}
+
+.topMap,
+.bottomMap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Scenario labels */
+.label {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.label[data-position="bottom"] {
+  top: auto;
+  bottom: var(--space-3);
+}
+
+/* Draggable curtain */
+.curtain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform: translateY(-2px);
+  z-index: 100;
+  cursor: ns-resize;
+}
+
+.curtainHandle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 32px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all 200ms ease;
+}
+
+.curtain:hover .curtainHandle,
+.curtain:active .curtainHandle {
+  background: var(--primary-hover);
+  border-color: var(--primary);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.curtainGrip {
+  width: 40px;
+  height: 4px;
+  background: currentColor;
+  border-radius: var(--radius-full);
+  opacity: 0.5;
+}
+
+/* Empty state for marine */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.emptyMessage {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2);
+}
+
+.emptyHint {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .curtainHandle {
+    transition: none;
+  }
+
+  .curtain:hover .curtainHandle,
+  .curtain:active .curtainHandle {
+    transform: translate(-50%, -50%); /* Keep centered, no scale */
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    height: 50vh; /* Map takes 50vh on mobile */
+  }
+
+  .label {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .curtainHandle {
+    width: 60px;
+    height: 24px;
+  }
+
+  .curtainGrip {
+    width: 30px;
+    height: 3px;
+  }
+}

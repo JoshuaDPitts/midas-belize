@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Coast/Hexagons6KM_ExportFeatures/Hexagons6KM_ExportFeatures.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Placencia regional hexagonal grid",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia 6 km hexagonal grid.",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Coast/Hexagons6KM_ExportFeatures/Hexagons6KM_ExportFeatures.shp"],
+  "dataset_id": "placencia-hexgrid-6km-shape",
+  "schema_family": "polygon-grid",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["polygon-grid", "placencia", "hexgrid", "6km"],
+  "title": "Placencia 6 km regional hexagonal grid",
+  "description": "6 km hexagonal cell grid covering the Placencia regional analysis area; used as the join base for `Hexagons6KM_*` MIMES output CSVs.",
+  "notes": "DRAFTED — actual file is named `Hexagons6KM_ExportFeatures.shp`, not `Hexagons6KM.shp` as Appendix A states. UPSTREAM-GAPS.md recommends canonicalising on the `_ExportFeatures` name; this draft takes that approach. If you prefer a shorter dataset_id or want to rename the file in Drive, update accordingly + update the hexgrid CSV provenance files' `join_to`."
+}

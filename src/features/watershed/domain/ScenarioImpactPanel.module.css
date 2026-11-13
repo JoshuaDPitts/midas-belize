@@ -1,0 +1,17 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background:
+    linear-gradient(
+      135deg,
+      oklch(from var(--color-surface-raised) l c h / 0.78),
+      oklch(from var(--color-surface) l c h / 0.6)
+    );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid oklch(from var(--color-border) l c h / 0.9);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}

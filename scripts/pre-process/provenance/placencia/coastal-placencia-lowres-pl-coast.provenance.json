@@ -1,0 +1,27 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/GIS/Placencia/Low Res/Pl Coast.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Coastal lo-res polygon vertices.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/GIS/Placencia/Low Res/Pl Coast.csv"
+  ],
+  "dataset_id": "coastal-placencia-lowres-pl-coast",
+  "schema_family": "mimes-coastal-shape-vertices",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "join_to": "placencia-coast-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "tags": [
+    "mimes-input",
+    "coastal",
+    "placencia"
+  ],
+  "title": "Coastal lo-res polygon vertices",
+  "description": "Vertex coordinates (x,y) for the Placencia lo-res coast polygons. shapeid+partid identifies the part within a multi-polygon shape.",
+  "notes": "DRAFTED 2026-05-12 \u2014 coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

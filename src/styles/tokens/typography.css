@@ -1,0 +1,51 @@
+/* Typography tokens — Funnel Display + Funnel Sans + Commit Mono.
+   Font variables injected by next/font in src/app/layout.tsx.
+
+   Split scales:
+   - App (dense, 14px base, fixed) for map chrome, UI primitives, data displays.
+   - Content (16px base, fluid clamp) for layout + content pages. */
+
+:root {
+  /* Families */
+  --font-display: var(--font-display-var), system-ui, sans-serif;
+  --font-sans:    var(--font-sans-var),    system-ui, sans-serif;
+  --font-mono:    var(--font-mono-var),    ui-monospace, monospace;
+
+  /* App scale — dense, fixed, base 14px */
+  --font-size-app-xs:    0.6875rem;
+  --font-size-app-sm:    0.75rem;
+  --font-size-app-base:  0.875rem;
+  --font-size-app-lg:    1rem;
+  --font-size-app-xl:    1.25rem;
+  --font-size-app-2xl:   1.5rem;
+
+  /* Content scale — fluid, base 16px */
+  --font-size-content-sm:   0.875rem;
+  --font-size-content-base: 1rem;
+  --font-size-content-lg:   1.125rem;
+  --font-size-content-xl:   1.375rem;
+  --font-size-content-2xl:  clamp(1.5rem,  1.2rem + 1.5vw,  2rem);
+  --font-size-content-3xl:  clamp(2rem,    1.5rem + 2.5vw, 3rem);
+  --font-size-content-4xl:  clamp(2.75rem, 2rem + 3.75vw,  4rem);
+  --font-size-content-5xl:  clamp(3.5rem,  2rem + 7.5vw,   5.5rem);
+  --font-size-content-6xl:  clamp(4rem,    2rem + 10vw,    7rem);
+
+  /* Weights — per DEC-012, Funnel Display caps at 800 (no 900 on Google Fonts) */
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-display:  800;
+
+  /* Line heights */
+  --line-height-display: 0.95;
+  --line-height-tight:   1.2;
+  --line-height-normal:  1.55;
+  --line-height-relaxed: 1.7;
+
+  /* Letter spacing */
+  --letter-spacing-display: -0.03em;
+  --letter-spacing-tight:   -0.01em;
+  --letter-spacing-normal:  0;
+  --letter-spacing-caps:    0.12em;
+}

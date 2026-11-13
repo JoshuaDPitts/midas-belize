@@ -1,0 +1,62 @@
+.legend {
+  position: absolute;
+  bottom: calc(var(--space-4) + var(--map-basemap-dock-clearance));
+  right: var(--space-3);
+  z-index: 5;
+  width: 240px;
+  padding: var(--space-3);
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glass-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-app-xs);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.gradientBar {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.tickRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text);
+}
+.tickRow > span:first-child { text-align: left; }
+.tickRow > span:nth-child(2) { text-align: center; }
+.tickRow > span:last-child { text-align: right; }
+
+.histogramLabel {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.histogram {
+  display: grid;
+  gap: 2px;
+  height: 32px;
+  align-items: end;
+  padding-top: 2px;
+  border-top: 1px solid var(--glass-border-subtle);
+}
+
+.histogramBar {
+  border-radius: 2px 2px 0 0;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}

@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Marine/Pl Marine.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Marine model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia marine polygons.",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Marine/Pl Marine.shp"],
+  "dataset_id": "placencia-marine-polygons",
+  "schema_family": "marine-polygons",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["marine", "polygons", "placencia"],
+  "title": "Placencia marine polygons",
+  "description": "Marine polygons for the Placencia site — 89 features. Sourced from `Pl Marine.shp` (legacy variant; `id` field, non-contiguous values 0..173). Per the 2026-05-12 polygon-ID audit, this is the polygon set that matches the published NBS / clade CSVs at 98% (87/89 join by Polygon_ID → id). The sibling `Pl Marine_ID.shp` renumbers identically-shaped geometry as MIMES_ID 1..89 contiguous and only matches the CSVs at 56% — so it is the canonical scheme for NEW MIMES outputs but unusable for the legacy NBS/clade tables until those are regenerated."
+}

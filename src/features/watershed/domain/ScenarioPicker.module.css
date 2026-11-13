@@ -1,0 +1,62 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.empty {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  appearance: none;
+  border: 1px solid oklch(from var(--color-border) l c h / 0.85);
+  background: oklch(from var(--color-surface) l c h / 0.6);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs, 0.75rem);
+  padding: 4px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 180ms var(--ease-out, ease-out),
+    color 180ms var(--ease-out, ease-out),
+    border-color 180ms var(--ease-out, ease-out);
+}
+
+.pill:hover {
+  border-color: oklch(from var(--color-accent) l c h / 0.55);
+  color: var(--color-text);
+}
+
+.pill:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.pillActive {
+  background: oklch(from var(--color-accent) l c h / 0.18);
+  border-color: oklch(from var(--color-accent) l c h / 0.7);
+  color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill {
+    transition: none;
+  }
+}

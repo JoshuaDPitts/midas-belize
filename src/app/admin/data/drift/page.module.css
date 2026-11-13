@@ -1,0 +1,64 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--glass-border-subtle);
+}
+
+.filterWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filterLabel {
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.filter {
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-sm);
+  color: var(--color-text);
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.filter:hover {
+  background: var(--glass-surface-medium);
+}
+
+.filter:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.resultCount {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-tertiary);
+}
+
+.errorBanner {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-app-sm);
+  color: var(--color-status-error);
+  background: color-mix(in oklch, var(--color-status-error) 12%, transparent);
+  border: 1px solid color-mix(in oklch, var(--color-status-error) 32%, transparent);
+  border-radius: var(--radius-sm);
+}

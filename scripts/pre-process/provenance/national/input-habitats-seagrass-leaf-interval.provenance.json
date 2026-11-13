@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Seagrasses/Interval Between Leaves.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Seagrass leaf-interval lookup.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Seagrasses/Interval Between Leaves.csv"],
+  "dataset_id": "input-habitats-seagrass-leaf-interval",
+  "schema_family": "mimes-seagrass-leaf-interval",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Seagrass leaf-interval lookup",
+  "description": "Two-column (x, y) lookup table for seagrass leaf-generation interval modelling. Header columns are unlabeled in the upstream source.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

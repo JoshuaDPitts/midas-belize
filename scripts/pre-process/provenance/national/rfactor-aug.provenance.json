@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/NSFCOPES_BU/Rfactor_August.provenance.json",
+  "source": "GloREDa (Global Rainfall Erosivity Database) — monthly R-factor, 1 km resolution",
+  "source_url": "https://esdac.jrc.ec.europa.eu/content/global-rainfall-erosivity",
+  "license": "CC BY 4.0",
+  "citation": "Panagos P. et al. (2023). GloREDa: Global Rainfall Erosivity Database — monthly 1 km update. European Commission Joint Research Centre, ESDAC.",
+  "upstream_paths": ["reference/NSFCOPES_BU/Rfactor_August.tif"],
+  "dataset_id": "rfactor-aug",
+  "schema_family": "rfactor-monthly",
+  "scope": "national",
+  "tags": ["rfactor", "erosivity", "raster", "monthly", "national", "rusle"],
+  "title": "Rainfall erosivity R-factor — August (monthly, 1 km)",
+  "description": "Monthly rainfall erosivity (R-factor) raster for Belize at 1 km resolution, August. Used as the R term in the RUSLE watershed model (reference/summary.md §2.1). Delivered as a cloud-optimized GeoTIFF after preprocessing.",
+  "notes": "DRAFTED from reference/summary.md §2.1 + §5.5 (Panagos et al. 2017 originally, 2023 for monthly). Verify exact citation — they have a 2017 PLOS One paper (first release) and a 2023 update for monthly at 1 km. If the reference data here is from the 2017 release, update citation accordingly."
+}

@@ -1,0 +1,27 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/AreaRatioByBIN.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Coastal lo-res area ratio by polygon \u00d7 BIN.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/Low Res/Inputs/AreaRatioByBIN.csv"
+  ],
+  "dataset_id": "coastal-placencia-lowres-area-ratio-by-bin",
+  "schema_family": "mimes-coastal-generic",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "join_to": "placencia-coast-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "tags": [
+    "mimes-input",
+    "coastal",
+    "placencia"
+  ],
+  "title": "Coastal lo-res area ratio by polygon \u00d7 BIN",
+  "description": "Per (polygon \u00d7 elevation-bin) pixel-count + area-ratio table for the Placencia lo-res coastal model.",
+  "notes": "DRAFTED 2026-05-12 \u2014 coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

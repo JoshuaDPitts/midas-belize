@@ -1,0 +1,15 @@
+/* Design Tokens — composed fan-out.
+   Import this file once from globals.css. Individual token files
+   are focused by responsibility.
+
+   Import order matters: glass tokens defined before shadow (which
+   references --glass-shadow + inset highlights). */
+
+@import './typography.css';
+@import './color.css';
+@import './viz.css';
+@import './glass.css';
+@import './space.css';
+@import './radius.css';
+@import './shadow.css';
+@import './motion.css';

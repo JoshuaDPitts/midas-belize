@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/
+.pnpm-store/
+
+# Build
+dist/
+build/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+tests/e2e/screenshots/**/*-diff.png
+tests/e2e/screenshots/**/*-actual.png
+tests/e2e/screenshots/*.png
+
+# Logs
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Firebase
+.firebase/
+.emulator-data/
+service-account*.json
+service-account-drive*.json
+
+# Misc
+*.pem
+*.dylib
+scripts/pre-process/rusle/out/
+reference/rusle-inputs/
+reference/rusle-factors/

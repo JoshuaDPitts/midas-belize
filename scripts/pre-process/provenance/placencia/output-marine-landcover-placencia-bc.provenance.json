@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Landcover Dynamics/Coast/Placencia/High Res/BaseCase.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES output",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Marine landcover dynamics — Placencia hi-res BaseCase.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Marine/Landcover Dynamics/Coast/Placencia/High Res/BaseCase.csv"],
+  "dataset_id": "output-marine-landcover-placencia-bc",
+  "schema_family": "mimes-scenario-output-timeseries",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["mimes-output", "scenario-timeseries", "simile"],
+  "title": "Marine landcover dynamics — Placencia hi-res BaseCase",
+  "description": "Time-series of landcover composition across the Placencia hi-res coastal polygons under the BaseCase marine scenario.",
+  "notes": "DRAFTED 2026-05-12 — Simile scenario output time-series. Will feed Scenario Engine (Phase 2 #9) when that sub-system is spec'd."
+}

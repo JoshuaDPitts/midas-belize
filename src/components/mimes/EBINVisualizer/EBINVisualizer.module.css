@@ -1,0 +1,13 @@
+.container {
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+}

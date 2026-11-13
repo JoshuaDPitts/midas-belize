@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/EcosysByElevBin 9x14.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Ecosystem×elevation-bin area ratios (9-bin × 14-ecosystem grid).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/EcosysByElevBin 9x14.csv"],
+  "dataset_id": "input-habitats-ecosys-by-elevbin-9x14",
+  "schema_family": "mimes-ecosys-by-elevbin",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Ecosystem×elevation-bin area ratios (9-bin × 14-ecosystem grid)",
+  "description": "Cross-table of area ratios for the 9-elevation-bin × 14-ecosystem partition of model space. Pairs an ElevBin_ID with an Ecosystem_ID and the fraction of bin area that ecosystem occupies.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

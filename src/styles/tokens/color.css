@@ -1,0 +1,56 @@
+/* Color tokens — OKLCH, unified brand hue 180 (teal) + hue 30 (coral warm accent).
+   Neutrals tinted 0.01–0.04 chroma toward hue 180 for subconscious cohesion. */
+
+[data-theme='dark'] {
+  /* Surfaces — tinted toward brand hue */
+  --color-surface:          oklch(14% 0.02 180);
+  --color-surface-raised:   oklch(19% 0.03 180);
+  --color-surface-overlay:  oklch(24% 0.04 180);
+
+  /* Text */
+  --color-text:             oklch(96% 0.01 180);
+  --color-text-secondary:   oklch(72% 0.02 180);
+  --color-text-tertiary:    oklch(55% 0.02 180);
+
+  /* Accents — teal at hue 180 + coral warm accent at hue 30 */
+  --color-accent:           oklch(80% 0.14 180);
+  --color-accent-hover:     oklch(88% 0.14 180);
+  --color-accent-warm:      oklch(72% 0.17 30);
+  --color-accent-warm-hover: oklch(78% 0.17 30);
+
+  /* Borders */
+  --color-border:           oklch(26% 0.02 180);
+  --color-border-strong:    oklch(36% 0.02 180);
+
+  /* Status — tinted, not pure Tailwind */
+  --color-status-success:   oklch(75% 0.17 150);
+  --color-status-warning:   oklch(78% 0.16 85);
+  --color-status-error:     oklch(68% 0.19 25);
+
+  /* Focus */
+  --color-focus-ring:       oklch(80% 0.14 180 / 0.4);
+}
+
+[data-theme='light'] {
+  --color-surface:          oklch(98% 0.004 180);
+  --color-surface-raised:   oklch(100% 0 0);
+  --color-surface-overlay:  oklch(100% 0 0);
+
+  --color-text:             oklch(20% 0.02 180);
+  --color-text-secondary:   oklch(42% 0.02 180);
+  --color-text-tertiary:    oklch(62% 0.01 180);
+
+  --color-accent:           oklch(55% 0.12 180);
+  --color-accent-hover:     oklch(48% 0.13 180);
+  --color-accent-warm:      oklch(58% 0.18 30);
+  --color-accent-warm-hover: oklch(52% 0.19 30);
+
+  --color-border:           oklch(90% 0.008 180);
+  --color-border-strong:    oklch(80% 0.012 180);
+
+  --color-status-success:   oklch(58% 0.14 150);
+  --color-status-warning:   oklch(65% 0.14 85);
+  --color-status-error:     oklch(55% 0.18 25);
+
+  --color-focus-ring:       oklch(55% 0.12 180 / 0.4);
+}

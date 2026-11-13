@@ -1,0 +1,81 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+  padding: var(--space-3, 0.75rem);
+  background: linear-gradient(
+    135deg,
+    oklch(from var(--color-surface-raised, #fff) l c h / 0.78),
+    oklch(from var(--color-surface, #f9f9f9) l c h / 0.6)
+  );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid oklch(from var(--color-border, #e2e8f0) l c h / 0.9);
+  border-radius: var(--radius-lg, 0.75rem);
+  box-shadow: var(--shadow-md, 0 4px 12px rgb(0 0 0 / 0.08));
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2, 0.5rem);
+}
+
+.headerTitle {
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary, #64748b);
+}
+
+.scopeLabel {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-tertiary, #94a3b8);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Legend ───────────────────────────────────────────────────────────────── */
+
+.legend {
+  display: flex;
+  gap: var(--space-3, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-secondary, #64748b);
+}
+
+.legendSwatch {
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* ── Chart ────────────────────────────────────────────────────────────────── */
+
+.chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ── Empty ────────────────────────────────────────────────────────────────── */
+
+.empty {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-text-tertiary, #94a3b8);
+  text-align: center;
+  padding: var(--space-4, 1rem);
+}

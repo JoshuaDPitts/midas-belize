@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Watershed/Placencia WatershedsSP.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Watershed model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia watershed sub-catchments.",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Watershed/Placencia WatershedsSP.shp"],
+  "dataset_id": "placencia-watershed-polygons",
+  "schema_family": "watershed-polygons",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["watershed", "polygons", "placencia"],
+  "title": "Placencia watershed polygons",
+  "description": "Six watershed sub-catchments for Placencia used by the RUSLE watershed model (reference/summary.md §2.1).",
+  "notes": "DRAFTED — picked `Placencia WatershedsSP.shp` over `Placencia Watersheds.shp` and `Placencia Watersheds1.shp`. The `SP` variant is also mirrored under `GIS Base Maps/Watersheds/Placencia/`, suggesting it's the canonical. Confirm."
+}

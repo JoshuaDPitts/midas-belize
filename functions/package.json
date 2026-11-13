@@ -1,0 +1,26 @@
+{
+  "name": "midas-belize-functions",
+  "private": true,
+  "main": "lib/index.js",
+  "engines": {
+    "node": "24"
+  },
+  "scripts": {
+    "sync-shared": "node scripts/sync-shared.mjs",
+    "prebuild": "npm run sync-shared",
+    "build": "rm -rf lib && tsc",
+    "predeploy": "npm run sync-shared",
+    "deploy": "npm run build && firebase deploy --only functions --project midas-belize-prod"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.11.0",
+    "@google-cloud/functions-framework": "^5.0.2",
+    "firebase-admin": "^13.8.0",
+    "firebase-functions": "^6.4.0",
+    "googleapis": "^171.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

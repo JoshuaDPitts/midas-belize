@@ -1,0 +1,31 @@
+.container { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  background: var(--glass-surface-subtle);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  min-width: 140px;
+  transition: all var(--duration-fast) var(--ease-out);
+  box-shadow: inset 0 1px 0 var(--glass-inset-highlight-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover { background: var(--glass-surface-medium); border-color: var(--glass-border-strong); }
+
+.active {
+  border-color: color-mix(in oklch, var(--color-accent) 40%, transparent);
+  background: color-mix(in oklch, var(--color-accent) 08%, transparent);
+  box-shadow: 0 0 20px color-mix(in oklch, var(--color-accent) 12%, transparent), inset 0 1px 0 var(--glass-inset-highlight-subtle);
+}
+
+.name { font-size: var(--font-size-app-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); }
+.desc { font-size: var(--font-size-app-xs); color: var(--color-text-secondary); }

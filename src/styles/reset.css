@@ -1,0 +1,16 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-content-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { color: var(--color-text); background-color: var(--color-surface); }
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { color: var(--color-accent-hover); }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font: inherit; color: inherit; background: none; border: none; }
+input, select, textarea { font: inherit; color: inherit; }

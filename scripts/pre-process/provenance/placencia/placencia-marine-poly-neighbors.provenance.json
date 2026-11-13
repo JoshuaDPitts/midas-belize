@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/PolyNeighbors.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Marine sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia marine polygon neighbors graph.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/PolyNeighbors.csv"],
+  "dataset_id": "placencia-marine-poly-neighbors",
+  "schema_family": "mimes-poly-neighbors",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["mimes-input", "marine", "topology", "placencia"],
+  "title": "Placencia marine polygon neighbors graph",
+  "description": "Edge list defining marine polygon-to-polygon adjacency for the Placencia marine sub-model. Drives biomass migration between adjacent polygons.",
+  "notes": "DRAFTED 2026-05-12 — pure topology graph (no spatial join needed)."
+}

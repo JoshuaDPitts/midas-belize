@@ -1,0 +1,24 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--glass-surface-subtle) 25%,
+    var(--glass-surface-strong) 50%,
+    var(--glass-surface-subtle) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+  min-height: 16px;
+  border: 1px solid var(--glass-border-subtle);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}

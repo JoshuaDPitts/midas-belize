@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/GladeByElevBIN16X11.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Clade×elevation-bin distribution (16×11).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/GladeByElevBIN16X11.csv"],
+  "dataset_id": "input-habitats-clade-by-elevbin-16x11",
+  "schema_family": "mimes-clade-by-elevbin",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Clade×elevation-bin distribution (16×11)",
+  "description": "Per (clade × elevation bin) distribution table. Filename retains the upstream 'Glade' typo (project-internal — cosmetic rename can wait).",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

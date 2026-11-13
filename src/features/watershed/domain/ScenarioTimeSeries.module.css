@@ -1,0 +1,101 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.empty {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-tertiary);
+  padding: var(--space-3);
+  border: 1px dashed oklch(from var(--color-border) l c h / 0.7);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+}
+
+.legendBase, .legendScenario {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legendSwatchBase, .legendSwatchScenario {
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.legendSwatchBase {
+  background: oklch(from var(--color-text-tertiary) l c h / 0.85);
+}
+
+.legendSwatchScenario {
+  background: var(--color-accent);
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: crosshair;
+}
+
+.gridLine {
+  stroke: oklch(from var(--color-border) l c h / 0.55);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+
+.tickText {
+  font-size: 10px;
+  fill: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.lineBase {
+  fill: none;
+  stroke: oklch(from var(--color-text-tertiary) l c h / 0.85);
+  stroke-width: 1.4;
+  stroke-dasharray: 3 3;
+}
+
+.lineScenario {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1.6;
+}
+
+.areaFill {
+  fill: oklch(from var(--color-accent) l c h / 0.16);
+  stroke: none;
+}
+
+.divergenceLine {
+  stroke: oklch(from var(--color-accent-warm) l c h / 0.7);
+  stroke-width: 1;
+  stroke-dasharray: 3 2;
+}
+
+.divergenceDot {
+  fill: var(--color-accent-warm);
+  stroke: var(--color-surface);
+  stroke-width: 1;
+}
+
+.divergenceLabel {
+  font-size: 9px;
+  fill: var(--color-accent-warm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild Attributes 16.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Foodweb sub-model (Simile)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — 16-guild foodweb guild attributes.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Guild Attributes 16.csv"],
+  "dataset_id": "foodweb-guild-attributes-16",
+  "schema_family": "mimes-foodweb-guild-attributes",
+  "scope": "national",
+  "tags": ["mimes-input", "foodweb", "guild-attributes", "simile"],
+  "title": "Foodweb guild attributes (16-guild model)",
+  "description": "Per-guild attribute table for the 16-guild MIMES foodweb model: recruitment + mortality rates, growth bounds, respiration, food intake, light/nutrient limitation flags, nitrogen + carbon ratios, temperature tolerances. Drives the FoodWebDiagram node parameters and the foodweb sub-model's biomass dynamics.",
+  "notes": "DRAFTED 2026-05-12 — paired with mimes-foodweb-guild-attributes schema declaration. Verify guild count is 16 (vs the 18 variant)."
+}

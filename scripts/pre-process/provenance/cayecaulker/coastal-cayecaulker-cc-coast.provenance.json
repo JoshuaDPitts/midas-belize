@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/GIS/Cay Caulker/CC Coast.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Coastal sub-model (Caye Caulker)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Caye Caulker coast polygon vertices.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/GIS/Cay Caulker/CC Coast.csv"],
+  "dataset_id": "coastal-cayecaulker-cc-coast",
+  "schema_family": "mimes-coastal-shape-vertices",
+  "scope": "site",
+  "sites": ["caye-caulker"],
+  "tags": ["mimes-input", "coastal", "caye-caulker", "shape-vertices"],
+  "title": "Coastal Caye Caulker coast polygon vertices",
+  "description": "Vertex coordinates (x, y) for the Caye Caulker coast polygons. Header is (shapeid, partid, x, y) — no MIMES_ID column, so this is geometry-only with no per-polygon attributes. May need a downstream pair-up with CayCaulkerCoastIslandl.shp.",
+  "notes": "DRAFTED 2026-05-12 — only Caye Caulker coastal CSV in the tree. Path uses 'Cay Caulker' (upstream typo retained per DEC-026/D-07)."
+}

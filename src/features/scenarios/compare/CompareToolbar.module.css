@@ -1,0 +1,172 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.backLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color 200ms ease;
+}
+
+.backLink:hover {
+  background: var(--glass-hover);
+}
+
+.scenarioSection {
+  min-width: 200px;
+}
+
+.separator {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 0 var(--space-2);
+}
+
+/* Vertical pills */
+.verticalToggle {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+}
+
+.pill,
+.pillActive {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.pill:hover:not(:disabled) {
+  background: var(--glass-hover);
+  color: var(--text-primary);
+}
+
+.pill:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pillActive {
+  background: var(--primary);
+  color: white;
+}
+
+.pillActive:hover {
+  background: var(--primary-hover);
+}
+
+/* Mode toggle */
+.modeToggle {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+}
+
+.mode,
+.modeActive {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.mode:hover {
+  background: var(--glass-hover);
+  color: var(--text-primary);
+}
+
+.modeActive {
+  background: var(--accent);
+  color: white;
+}
+
+.modeActive:hover {
+  background: var(--accent-hover);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .pill,
+  .mode,
+  .modeActive {
+    transition: none;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .backLink {
+    align-self: flex-start;
+  }
+
+  .scenarioSection {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .separator {
+    display: none; /* Hide "vs" separator on mobile */
+  }
+
+  /* Horizontal scroll for vertical pills */
+  .verticalToggle {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .verticalToggle::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .pill,
+  .pillActive {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .modeToggle {
+    width: 100%;
+  }
+
+  .mode,
+  .modeActive {
+    flex: 1;
+    text-align: center;
+  }
+}

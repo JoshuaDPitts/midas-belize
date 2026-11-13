@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Pred Prey IDs 16.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Foodweb sub-model (Simile)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — 16-guild foodweb predator-prey edge list.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Foodweb/Pred Prey IDs 16.csv"],
+  "dataset_id": "foodweb-pred-prey-16",
+  "schema_family": "mimes-foodweb-pred-prey",
+  "scope": "national",
+  "tags": ["mimes-input", "foodweb", "trophic-graph", "pred-prey", "16-guild", "simile"],
+  "title": "Foodweb predator-prey edges (16-guild model)",
+  "description": "Edge list defining trophic interactions in the 16-guild MIMES foodweb. Each row pairs a predator guild with a prey guild plus a natural-language description and a Utility flag. Drives the FoodWebDiagram Sankey rendering directly (replacing its current synthetic placeholder edges).",
+  "notes": "DRAFTED 2026-05-12 — high-leverage: feeds the FoodWebDiagram visual component. Coexists with the 18-guild variant; current Marine UI uses the 16-guild model."
+}

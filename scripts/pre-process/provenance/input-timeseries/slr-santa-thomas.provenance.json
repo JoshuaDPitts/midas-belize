@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/Sante Thomas Sealevel 2.provenance.json",
+  "source": "NOAA Center for Operational Oceanographic Products and Services (CO-OPS) — Station 9635002 (Puerto Santo Tomás de Castilla, Guatemala)",
+  "source_url": "https://tidesandcurrents.noaa.gov/stationhome.html?id=9635002",
+  "license": "Public domain (NOAA, US Government work)",
+  "citation": "NOAA Center for Operational Oceanographic Products and Services (CO-OPS). Station 9635002 — Puerto Santo Tomás de Castilla, Guatemala: Water Levels and Tides. NOAA Tides & Currents.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input time/Sante Thomas Sealevel 2.csv"],
+  "dataset_id": "slr-santa-thomas",
+  "schema_family": "slr-timeseries",
+  "scope": "national",
+  "tags": ["slr", "timeseries", "climate", "national"],
+  "title": "Sea level — Puerto Santo Tomás de Castilla (Station 9635002)",
+  "description": "Water-level / tide observations from NOAA CO-OPS Station 9635002 at Puerto Santo Tomás de Castilla, Guatemala — the closest CO-OPS station serving as the regional sea-level reference for Belize's Caribbean coast. Mean range ~0.15–0.30 m per reference/summary.md §4; supports three IPCC AR6 SLR scenarios (low / intermediate / high) in the project's coastal model.",
+  "notes": "Source identified 2026-04-29 — see DEC-027 follow-up."
+}

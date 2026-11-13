@@ -1,0 +1,39 @@
+.bar {
+  position: fixed;
+  bottom: var(--space-3);
+  /* Reserve space on the left for the SidebarRail (44px) + its left edge gap +
+     the SidebarPanel's left edge offset, then leave panel area as a hover zone.
+     For v1, just align with the navbar's left/right offset. */
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 44px;
+  z-index: 9;
+  background: var(--glass-surface-medium);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass-md);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 var(--space-3);
+  gap: var(--space-3);
+  animation: slideUp var(--duration-normal) var(--ease-out) both;
+  /* Own compositing layer so backdrop-filter doesn't re-sample the
+     continuously-repainting deck.gl canvas beneath it on mousemove. */
+  will-change: transform;
+  isolation: isolate;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(8px) translateZ(0); opacity: 0; }
+  to   { transform: translateY(0)   translateZ(0); opacity: 1; }
+}
+
+.attribution {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  justify-self: end;
+  font-family: var(--font-sans);
+}

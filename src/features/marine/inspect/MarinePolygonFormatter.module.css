@@ -1,0 +1,95 @@
+/* MarinePolygonFormatter — inspect-tab card for marine/coast polygon features */
+
+.card {
+  padding: var(--space-4);
+  background: var(--glass-surface-medium);
+  backdrop-filter: blur(20px) saturate(200%);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header {
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+.nbs {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--font-size-app-2xl);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--letter-spacing-display);
+  line-height: var(--line-height-display);
+  /* color set via inline style using nbsToColor() */
+}
+
+.nbsLabel {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+  border-top: 1px solid var(--glass-border-subtle);
+  padding-top: var(--space-3);
+}
+
+.dl dt {
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-secondary);
+  align-self: center;
+}
+
+.dl dd {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text);
+  text-align: right;
+  margin: 0;
+}
+
+.cta {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-app-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.cta:hover {
+  background: var(--glass-surface-medium);
+  border-color: var(--glass-border-strong);
+  color: var(--color-accent-hover);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

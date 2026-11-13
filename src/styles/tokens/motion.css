@@ -1,0 +1,30 @@
+/* Motion tokens — durations and easings.
+   Replaces the legacy animations.css. Adds --duration-longer (600ms for
+   sheen/reveals) and --duration-longest (900ms for page-transition
+   choreography). */
+
+:root {
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    300ms;
+  --duration-longer:  600ms;
+  --duration-longest: 900ms;
+
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out:    cubic-bezier(0.45, 0, 0.55, 1);
+
+  --transition-hover: var(--duration-fast)   var(--ease-out);
+  --transition-panel: var(--duration-slow)   var(--ease-out);
+  --transition-fade:  var(--duration-normal) var(--ease-in-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:    0ms;
+    --duration-normal:  0ms;
+    --duration-slow:    0ms;
+    --duration-longer:  0ms;
+    --duration-longest: 0ms;
+  }
+}

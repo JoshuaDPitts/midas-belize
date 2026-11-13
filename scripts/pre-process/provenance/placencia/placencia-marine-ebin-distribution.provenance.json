@@ -1,0 +1,28 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/MarineEBINDistribution.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 Marine sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Placencia marine EBIN distribution per polygon.",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Marine Model/Placencia/MarineEBINDistribution.csv"
+  ],
+  "dataset_id": "placencia-marine-ebin-distribution",
+  "schema_family": "mimes-marine-ebin-distribution",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "join_to": "placencia-marine-polygons",
+  "join_key": "MIMES_ID",
+  "csv_key": "Polygon_ID",
+  "tags": [
+    "mimes-input",
+    "marine",
+    "depth-bin",
+    "placencia"
+  ],
+  "title": "Placencia marine EBIN distribution per polygon",
+  "description": "Per (polygon \u00d7 elevation/depth bin) pixel count + area ratio for Placencia marine polygons. Joined to `placencia-marine-polygons` by MIMES_ID; drives the bin-level area weights used in aggregation.",
+  "notes": "DRAFTED 2026-05-12 \u2014 per-polygon join. Verify MIMES_ID matches placencia-marine-polygons key."
+}

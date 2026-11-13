@@ -1,0 +1,47 @@
+.chrome {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.chrome > * {
+  pointer-events: auto;
+}
+
+/* Global map chrome occupies the RIGHT edge. The left edge is owned by the
+   SidebarRail/Panel; each domain vertical anchors its EncoderPicker top-right
+   (top: var(--space-3) * 2 + 56px, ~44px tall) and its Legend bottom-right.
+   The control column stacks BELOW the encoder so the two don't overlap. */
+.rightColumn {
+  position: absolute;
+  top: calc(var(--space-3) * 2 + 56px + 44px + var(--space-2));
+  right: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-end;
+}
+
+/* Coordinates + scale pin bottom-right, clearing the vertical legend stack
+   (legend + optional resolution toggle, ~120px) plus the basemap dock. */
+.bottomRight {
+  position: absolute;
+  bottom: calc(var(--space-3) + 140px + var(--map-basemap-dock-clearance));
+  right: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-end;
+}
+
+/* Basemap style switcher, pinned to the very bottom-right corner. The active
+   vertical's legend stacks directly above it (each legend adds
+   --map-basemap-dock-clearance to its own bottom offset). */
+.basemapDock {
+  position: absolute;
+  bottom: calc(var(--space-3) + 25px);
+  right: var(--space-3);
+  display: flex;
+  justify-content: flex-end;
+}

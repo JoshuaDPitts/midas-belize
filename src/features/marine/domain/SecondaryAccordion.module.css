@@ -1,0 +1,90 @@
+.section {
+  background: var(--glass-surface-strong);
+  backdrop-filter: blur(24px) saturate(220%);
+  border: 1px solid var(--glass-border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+
+.header:hover {
+  background: color-mix(in oklab, var(--color-accent), transparent 92%);
+  transform: translateY(-1px);
+}
+
+.header:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-app-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.peek {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-secondary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  transform: rotate(-90deg);
+  transition: transform var(--duration-normal) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.chevronOpen {
+  transform: rotate(0deg);
+  color: var(--color-text);
+}
+
+/* CSS grid trick for smooth expand/collapse animation.
+   visibility:hidden/visible added to satisfy jsdom not.toBeVisible() assertions
+   while maintaining the smooth transition for real browsers. */
+.body {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--duration-normal) var(--ease-out);
+}
+
+.expanded .body {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.bodyInner {
+  overflow: hidden;
+  padding: 0 var(--space-3) var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .body { transition: none; }
+  .chevron { transition: none; }
+  .header { transition: none; }
+}

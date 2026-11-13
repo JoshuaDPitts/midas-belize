@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/belize-admin/geoBoundaries-BLZ-ADM1.geojson",
+  "source": "geoBoundaries v4.0 — BLZ ADM1 boundaries",
+  "source_url": "https://www.geoboundaries.org/api/current/gbOpen/BLZ/ADM1/",
+  "license": "CC BY 4.0",
+  "citation": "Runfola D. et al. (2020). geoBoundaries: A global database of political administrative boundaries. PLoS ONE 15(4): e0231866.",
+  "upstream_paths": ["external:geoboundaries.org/BLZ/ADM1"],
+  "dataset_id": "belize-admin",
+  "schema_family": "belize-admin",
+  "scope": "national",
+  "tags": ["admin", "national", "boundaries"],
+  "title": "Belize — national + district administrative boundaries",
+  "description": "Belize national + district (ADM1) polygons from geoBoundaries v4.0. Drafted from reference/summary.md §9 stakeholder context; the actual remote-fetch pipeline for this dataset lives outside reference/.",
+  "notes": "DRAFTED — source/url/license/citation all from geoBoundaries defaults. Verify the DOI / citation wording matches what they currently publish at https://www.geoboundaries.org. Upstream is a remote fetch, not a file in reference/ — the `upstream_paths` entry uses an `external:` sentinel (not a real GCS path); the fetcher in Stage 3 will need a small adapter for this case."
+}

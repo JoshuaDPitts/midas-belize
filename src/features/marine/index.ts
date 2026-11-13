@@ -1,0 +1,1 @@
+export { marineManifest } from './manifest';

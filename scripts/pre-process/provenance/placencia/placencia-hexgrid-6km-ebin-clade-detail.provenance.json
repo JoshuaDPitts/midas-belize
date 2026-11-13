@@ -1,0 +1,28 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Hexagons6KM_ebin_clade_detail.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 MIMES model output (clade \u00d7 depth bins)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Placencia 6 km hexagonal grid (clade \u00d7 depth-bin detail).",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/Processed Output/Clade and Depth Bins/Hexagons6KM_ebin_clade_detail.csv"
+  ],
+  "dataset_id": "placencia-hexgrid-6km-ebin-clade-detail",
+  "schema_family": "mimes-polygon-detail",
+  "scope": "site",
+  "sites": [
+    "placencia"
+  ],
+  "tags": [
+    "marine",
+    "mimes-output",
+    "clade-detail",
+    "placencia"
+  ],
+  "title": "Placencia 6 km hexagonal grid \u2014 clade \u00d7 depth-bin detail",
+  "description": "Per-polygon ecosystem clade percentage broken down by depth bin for Placencia 6 km hexagonal grid, from the MIMES model output. Joined to the geometry layer `placencia-hexgrid-6km-shape` by `Polygon_ID` per DEC-024 typed-join-key.",
+  "join_to": "placencia-hexgrid-6km-shape",
+  "join_key": "GRID_ID",
+  "csv_key": "Polygon_ID",
+  "notes": "DRAFTED \u2014 MIMES/MIDAS project-internal. Joined to `placencia-hexgrid-6km-shape`; if that dataset is blocked (see UPSTREAM-GAPS.md) this one cascades to `provenance-incomplete` at seed time."
+}

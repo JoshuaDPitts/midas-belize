@@ -1,0 +1,25 @@
+.table { border-collapse: collapse; }
+.corner { padding: var(--space-2); }
+.header {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+.row { border-bottom: 1px solid var(--glass-border-subtle); }
+.rowHeader {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  text-align: left;
+  white-space: nowrap;
+}
+.cell { padding: var(--space-2) var(--space-3); text-align: center; }
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+}

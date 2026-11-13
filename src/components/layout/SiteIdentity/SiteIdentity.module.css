@@ -1,0 +1,4 @@
+.container { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+.logoLink { display: flex; align-items: center; }
+.logo { height: 32px; opacity: 0.7; transition: opacity var(--duration-fast) var(--ease-out); }
+.logo:hover { opacity: 1; }

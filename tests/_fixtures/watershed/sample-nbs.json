@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "Name": "Big Creek",
+      "NbS_Score": 0.62,
+      "Conservation_Value": 0.71,
+      "Restoration_Potential": 0.55,
+      "Mangrove_Pct": 0.18,
+      "Suitable_Elev_Pct": 0.68
+    },
+    {
+      "Name": "Sennis",
+      "NbS_Score": 0.41,
+      "Conservation_Value": 0.52,
+      "Restoration_Potential": 0.38,
+      "Mangrove_Pct": 0.05,
+      "Suitable_Elev_Pct": 0.43
+    }
+  ]
+}

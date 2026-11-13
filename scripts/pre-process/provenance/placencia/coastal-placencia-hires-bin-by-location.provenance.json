@@ -1,0 +1,18 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/HIgh Res/BIN by Location.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Coastal sub-model (Placencia)",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coastal hi-res BIN distribution by polygon.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Coastal Model/Model/Placencia/HIgh Res/BIN by Location.csv"],
+  "dataset_id": "coastal-placencia-hires-bin-by-location",
+  "schema_family": "mimes-coastal-bin-location",
+  "scope": "site",
+  "sites": ["placencia"],
+  "join_to": "placencia-30polygons-shape",
+  "join_key": "Polygon_ID",
+  "tags": ["mimes-input", "coastal", "placencia"],
+  "title": "Coastal hi-res BIN distribution by polygon",
+  "description": "Per (polygon × elevation bin) pixel count + area share for Placencia hi-res 30-polygon grid.",
+  "notes": "DRAFTED 2026-05-12 — coastal Placencia input. Verify join_to + join_key match real polygon grid."
+}

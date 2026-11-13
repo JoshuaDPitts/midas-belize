@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Placencia.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia site boundary (ArcGIS export).",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Marine/Placencia/Placencia.shp"],
+  "dataset_id": "placencia-site",
+  "schema_family": "site-boundary",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["site-boundary", "placencia"],
+  "title": "Placencia site boundary",
+  "description": "Site-extent polygon for Placencia used for scoping marine/coastal analyses.",
+  "notes": "DRAFTED from the live scripts/pre-process/datasets/placencia-site.ts DatasetDefinition verbatim. This .provenance.json will supersede the code registry entry once the bulk seed (Task 47) lands; until then the live placencia-site.ts continues to work."
+}

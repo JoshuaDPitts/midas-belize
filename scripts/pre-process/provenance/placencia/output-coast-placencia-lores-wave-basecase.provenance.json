@@ -1,0 +1,16 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Coasts/Placencia/Low Res/Wave attenuation/BaseCaseW.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Simile MIMES output",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coastal Placencia lo-res wave attenuation — BaseCase.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Outputs/Coasts/Placencia/Low Res/Wave attenuation/BaseCaseW.csv"],
+  "dataset_id": "output-coast-placencia-lores-wave-basecase",
+  "schema_family": "mimes-scenario-output-timeseries",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["mimes-output", "scenario-timeseries", "simile"],
+  "title": "Coastal Placencia lo-res wave attenuation — BaseCase",
+  "description": "Time-series of wave energy per polygon for the Placencia lo-res model under BaseCase.",
+  "notes": "DRAFTED 2026-05-12 — Simile scenario output time-series. Will feed Scenario Engine (Phase 2 #9) when that sub-system is spec'd."
+}

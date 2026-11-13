@@ -1,0 +1,43 @@
+.figure {
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.captionMeta {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.empty {
+  margin: 0;
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-app-sm);
+  background: var(--glass-surface-subtle);
+  border: 1px dashed var(--glass-border-strong);
+  border-radius: var(--radius-md);
+}

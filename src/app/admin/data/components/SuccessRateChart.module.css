@@ -1,0 +1,99 @@
+.figure {
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-2);
+  height: 96px;
+}
+
+.barWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  height: 100%;
+}
+
+.barTrack {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background: var(--glass-surface-subtle);
+  border-bottom: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.bar {
+  width: 100%;
+  min-height: 2px;
+  background: color-mix(in oklch, var(--color-status-error) 30%, transparent);
+  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transition:
+    height var(--duration-slow) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.barWrap:hover .bar {
+  background: color-mix(in oklch, var(--color-status-error) 40%, transparent);
+}
+
+.barSuccess {
+  width: 100%;
+  background: var(--color-status-success);
+  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+  transition: height var(--duration-slow) var(--ease-out);
+}
+
+.barWrap:hover .barSuccess {
+  background: color-mix(in oklch, var(--color-status-success) 88%, white);
+}
+
+.barLabel {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--glass-border-subtle);
+}
+
+.captionPrimary {
+  font-family: var(--font-display);
+  font-size: var(--font-size-app-xl);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--letter-spacing-display);
+  color: var(--color-status-success);
+  font-variant-numeric: tabular-nums;
+}
+
+.captionMeta {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}

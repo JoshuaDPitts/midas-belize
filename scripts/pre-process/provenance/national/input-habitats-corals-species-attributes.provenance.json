@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Corals/Corals Species attributes.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Coral species attributes.",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Corals/Corals Species attributes.csv"],
+  "dataset_id": "input-habitats-corals-species-attributes",
+  "schema_family": "mimes-coral-attributes",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Coral species attributes",
+  "description": "Per-coral-species attribute table for the MIMES coral sub-model: biomass density coefficients across scenarios (BC base-case, WC worst-case, HR high-restoration, dg degraded), height curves, plus per-scenario adjustments. Drives coral growth + cover dynamics.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

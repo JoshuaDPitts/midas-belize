@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Erosion Deposition/Input data/BIN 16/Elevation BINS Attributes.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Input Habitats lookups",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Erosion-deposition elevation-bin attributes (16-bin).",
+  "upstream_paths": ["reference/MIMES_MIDAS/2026MIDASMIMES_COPES/Belize-clean/Belize/Input Habitats/Erosion Deposition/Input data/BIN 16/Elevation BINS Attributes.csv"],
+  "dataset_id": "input-habitats-erosion-bins-attributes-16",
+  "schema_family": "mimes-erosion-bins-attributes",
+  "scope": "national",
+  "tags": ["mimes-input", "input-habitats", "lookup-table"],
+  "title": "Erosion-deposition elevation-bin attributes (16-bin)",
+  "description": "Per elevation-bin parameters for the erosion-deposition sub-model: bin elevation range, sediment exchange ratios per day, outside-sediment input, sediment export. 16-bin variant.",
+  "notes": "DRAFTED 2026-05-12 — Input Habitats lookup table. Not per-polygon; no spatial join."
+}

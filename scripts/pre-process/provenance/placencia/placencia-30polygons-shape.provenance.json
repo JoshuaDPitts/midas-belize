@@ -1,0 +1,15 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/GIS Base Maps/Coasts/Placencia/High Res/Pl Map 1-13-26.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project — Coastal model high-resolution grid",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 — Placencia 30-polygon coastal grid (high-res).",
+  "upstream_paths": ["reference/MIMES_MIDAS/GIS Base Maps/Coasts/Placencia/High Res/Pl Map 1-13-26.shp"],
+  "dataset_id": "placencia-30polygons-shape",
+  "schema_family": "polygon-grid",
+  "scope": "site",
+  "sites": ["placencia"],
+  "tags": ["polygon-grid", "placencia", "30-polygons", "coastal-model", "high-res"],
+  "title": "Placencia 30-polygon coastal grid (high-res)",
+  "description": "The 30-polygon high-resolution spatial framework used for Placencia's coastal model (reference/summary.md §2.2). Serves as the geometric base for the clade/depth-bin MIMES outputs joined via csv-polygon-join. Sourced from `Pl Map 1-13-26.shp` (30 features; `MIMES_ID` ∈ {1..30} matches the CSV `Polygon_ID` set exactly). Companion to `placencia-coast-polygons` (low-res 8-polygon variant); both are kept available so downstream features can pick the resolution appropriate to their context."
+}

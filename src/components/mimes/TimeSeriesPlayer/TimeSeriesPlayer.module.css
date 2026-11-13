@@ -1,0 +1,124 @@
+.player {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, color-mix(in oklch, var(--color-accent-hover) 90%, transparent) 0%, color-mix(in oklch, var(--color-accent) 85%, transparent) 100%);
+  border: 1px solid var(--glass-border-strong);
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 2px 12px color-mix(in oklch, var(--color-accent) 30%, transparent),
+    inset 0 1px 2px var(--glass-inset-highlight);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 4px 20px color-mix(in oklch, var(--color-accent) 40%, transparent),
+    inset 0 1px 2px var(--glass-inset-highlight);
+}
+
+.playButton:active {
+  transform: scale(0.95);
+}
+
+/* Pulsing ring when playing */
+.playButton[data-playing='true'] {
+  animation: playPulse 2s ease-in-out infinite;
+}
+
+@keyframes playPulse {
+  0%, 100% {
+    box-shadow:
+      0 2px 12px color-mix(in oklch, var(--color-accent) 30%, transparent),
+      0 0 0 0 color-mix(in oklch, var(--color-accent) 25%, transparent),
+      inset 0 1px 2px var(--glass-inset-highlight);
+  }
+  50% {
+    box-shadow:
+      0 2px 12px color-mix(in oklch, var(--color-accent) 30%, transparent),
+      0 0 0 8px color-mix(in oklch, var(--color-accent) 0%, transparent),
+      inset 0 1px 2px var(--glass-inset-highlight);
+  }
+}
+
+.scrubber {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  padding: 3px 8px;
+  background: var(--glass-surface-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.speed {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-app-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background: var(--glass-surface-medium);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 3px 6px 3px 8px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  transition: border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.speed:hover {
+  background: var(--glass-surface-strong);
+  border-color: var(--glass-border-strong);
+}
+
+.speed:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--color-accent) 20%, transparent);
+}
+
+.speed option {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playButton[data-playing='true'] {
+    animation: none;
+  }
+  .playButton:hover {
+    transform: none;
+  }
+}

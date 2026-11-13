@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+}
+
+/* Empty state for marine */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.emptyMessage {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2);
+}
+
+.emptyHint {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    height: 50vh; /* Map takes 50vh on mobile */
+  }
+
+  .empty {
+    height: 50vh;
+    padding: var(--space-6);
+  }
+
+  .emptyMessage {
+    font-size: var(--text-lg);
+  }
+
+  .emptyHint {
+    font-size: var(--text-sm);
+  }
+}

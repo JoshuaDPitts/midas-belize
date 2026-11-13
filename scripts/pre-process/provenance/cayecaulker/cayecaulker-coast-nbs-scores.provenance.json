@@ -1,0 +1,28 @@
+{
+  "_target_path": "raw/MIMES_MIDAS/Processed Output/Clade and Depth Bins/CC_Coast_nbs_scores.provenance.json",
+  "source": "MIDAS/MIMES Belize 2026 project \u2014 NbS (Nature-based Solutions) scoring",
+  "source_url": null,
+  "license": "Shared by project collaborators for internal use; not for public redistribution without provenance check.",
+  "citation": "MIDAS/MIMES Belize 2026 \u2014 Caye Caulker coast polygons (NbS scores).",
+  "upstream_paths": [
+    "reference/MIMES_MIDAS/Processed Output/Clade and Depth Bins/CC_Coast_nbs_scores.csv"
+  ],
+  "dataset_id": "cayecaulker-coast-nbs-scores",
+  "schema_family": "mimes-nbs-scores",
+  "scope": "site",
+  "sites": [
+    "caye-caulker"
+  ],
+  "tags": [
+    "marine",
+    "mimes-output",
+    "nbs-scores",
+    "caye-caulker"
+  ],
+  "title": "Caye Caulker coast polygons \u2014 NbS scores",
+  "description": "NbS scoring per polygon for Caye Caulker coast polygons.",
+  "join_to": "cayecaulker-coast-polygons",
+  "join_key": "ID",
+  "csv_key": "Polygon_ID",
+  "notes": "DRAFTED \u2014 MIMES/MIDAS project-internal. / NUMBER-COERCION 2026-05-13T18:00Z \u2014 bump to force new input hash + new version after converter change to coerce numeric CSV strings to numbers."
+}

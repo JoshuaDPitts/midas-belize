@@ -1,0 +1,71 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.empty {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-text-tertiary);
+  padding: var(--space-3);
+  border: 1px dashed oklch(from var(--color-border) l c h / 0.7);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-style: italic;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.colLabel {
+  font-weight: 500;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.arc {
+  stroke-width: 1.2;
+  stroke-dasharray: 4 3;
+  animation: flow 1.6s linear infinite;
+  opacity: 0.65;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
+.rowGroup {
+  cursor: pointer;
+  transition: opacity 180ms var(--ease-out, ease-out);
+}
+
+.rowGroup:hover {
+  opacity: 0.85;
+}
+
+.rowLabel {
+  font-size: 10px;
+  fill: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arc {
+    animation: none;
+  }
+  .rowGroup {
+    transition: none;
+  }
+}
